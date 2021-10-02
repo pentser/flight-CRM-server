@@ -1,0 +1,11 @@
+{
+    "privateKey": "myPaSW0rd2021",
+    "ttl": 259200,
+    "googleApiKey": "AIzaSyCCQ7lj8cW6BJow7jW9YriTBr4bpVAUIxQ",
+    "pg":{
+        "host":"127.0.0.1",
+        "user":"postgres",
+        "password":"admin",
+        "database":"test_db"
+   }
+}
