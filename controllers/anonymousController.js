@@ -1,6 +1,28 @@
 const bl= require('../bl/anonymous_bl');
 const {trx_keeper}=require('../utils/transactionKeeper');
 
+
+
+// controller actions
+get_all_countries = async (req, res) => {
+    
+    try {
+        
+        const paramsAr=[];
+        const action= await trx_keeper(req.url,'getAllCountries', paramsAr);
+        if(action) {
+          result=await bl.getAllCountries();
+          res.send(result);
+
+        }
+      
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
   get_all_flights = async (req, res) => {
     
     try {
@@ -10,8 +32,9 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         if(action) {
           result=await bl.getAllFlights();
           res.send(result);
+
         }
-    
+      
       
     }catch(e) {
      console.log(e)
@@ -19,14 +42,33 @@ const {trx_keeper}=require('../utils/transactionKeeper');
     
   }
 
-  get_all_countries = async (req, res) => {
+  get_arrival_flights = async (req, res) => {
     
     try {
         
         const paramsAr=[];
-        const action= await trx_keeper(req.url,'getAllCountries', paramsAr);
+        const action= await trx_keeper(req.url,'getArrivalFlights', paramsAr);
         if(action) {
-          result=await bl.getAllCountries();
+          result=await bl.getArrivalFlights();
+          res.send(result);
+
+        }
+      
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
+  get_departure_flights = async (req, res) => {
+    
+    try {
+        
+        const paramsAr=[];
+        const action= await trx_keeper(req.url,'getDepartureFlights', paramsAr);
+        if(action) {
+          result=await bl.getDepartureFlights();
           res.send(result);
 
         }
@@ -57,12 +99,98 @@ const {trx_keeper}=require('../utils/transactionKeeper');
     
   }
 
+  get_flight_by_id = async (req, res) => {
+    
+    try {
+        
+        params=req.query;
+        const paramsAr=Object.values(params)
+        const action= await trx_keeper(req.url,'getFlightById', paramsAr);
+        if(action) {
+          result=await bl.getFlightById(params);
+          res.send(result);
 
-
-
-
-  module.exports= {
-      get_all_flights,
-      get_all_countries,
-      get_all_airlines_join
+        }
+      
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
   }
+
+  get_flight_by_airline_id = async (req, res) => {
+    
+    try {
+        
+        params=req.query;
+        const paramsAr=Object.values(params)
+        const action= await trx_keeper(req.url,'getFlightByAirlineId', paramsAr);
+        if(action) {
+          result=await bl.getFlightByAirlineId(params);
+          res.send(result);
+
+        }
+      
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
+  get_flights_by_parameters = async (req, res) => {
+    
+    try {
+        
+        params=req.query;
+        const paramsAr=Object.values(params)
+        const action= await trx_keeper(req.url,'getFlightsByParameters', paramsAr);
+        if(action) {
+          result=await bl.getFlightByParameters(params);
+          res.send(result);
+
+        }
+      
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
+  check_username_availability = async (req, res) => {
+    
+    try {
+        
+        params=req.query;
+        const paramsAr=Object.values(params)
+        const action= await trx_keeper(req.url,'checkUsernameAvailability', paramsAr);
+        if(action) {
+          result=await bl.checkUsernameAvailability(params);
+          res.send(result);
+
+        }
+      
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
+
+
+
+module.exports={
+    get_all_countries,
+    get_all_flights,
+    get_arrival_flights,
+    get_departure_flights,
+    get_all_airlines_join,
+    get_flight_by_airline_id,
+    get_flight_by_id,
+    get_flights_by_parameters,
+    check_username_availability
+
+}
