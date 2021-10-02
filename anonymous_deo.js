@@ -19,8 +19,21 @@ const getAllFlights=async () => {
         console.log(e.message)
     }
  }
+ const getAllAirlinesJoin=async () => {
+   
+    try{
+
+        const result=await rawRepo.getRowResult(`select * from sp_get_all_airlines_join()`);
+        return result;
+    } catch(e){
+        console.log(e.message);
+
+    }
+    
+}
 
  module.exports={
      getAllFlights,
-     getAllCountries
+     getAllCountries,
+     getAllAirlinesJoin
  }

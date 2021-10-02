@@ -23,8 +23,22 @@ const  getAllFlights=async ()=>{
     }
  }
 
+ const  getAllAirlinesJoin=async ()=>{
+
+    try {
+     const res=await anonymous_deo.getAllAirlinesJoin();
+     return res.rows;
+    }catch(e){
+        console.log (e.message)
+ 
+    }
+ }
+
+
+
 
  module.exports={
      getAllFlights,
-     getAllCountries
+     getAllCountries,
+     getAllAirlinesJoin
  }
