@@ -17,6 +17,10 @@ router.delete('/delete_customer',adminController.delete_customer);
 router.get('/get_user_by_id', adminController.get_user_by_id);
 router.get('/get_admin_by_user', adminController.get_admin_by_user);
 
+router.post('/insert_user',adminController.insert_user);
+router.put('/update_user',adminController.update_user);
+router.delete('/delete_user',adminController.delete_user);
+
 
 
 router.get('/get_all_users', adminController.get_all_users);

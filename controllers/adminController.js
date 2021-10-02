@@ -96,6 +96,51 @@ const {trx_keeper}=require('../utils/transactionKeeper');
     
   }
 
+  insert_user = async (req, res) => {
+    
+    try {
+        params=req.body;
+        const paramsAr=Object.values(params)
+        await trx_keeper(req.url,'insertUser',paramsAr);
+        result=await bl.insertUser(params);
+        res.send(result);
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
+  update_user = async (req, res) => {
+    
+    try {
+        params=req.body;
+        const paramsAr=Object.values(params)
+        await trx_keeper(req.url,'updateUser',paramsAr);
+        result=await bl.updateUser(params);
+        res.send(result);
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
+  delete_user = async (req, res) => {
+    
+    try {
+        params=req.body;
+        const paramsAr=Object.values(params)
+        await trx_keeper(req.url,'deleteUser',paramsAr);
+        result=await bl.deleteUser(params);
+        res.send(result);
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
   get_all_users = async (req, res) => {
     
     try {
@@ -189,6 +234,10 @@ const {trx_keeper}=require('../utils/transactionKeeper');
   
 
   module.exports={
+
+    insert_user,
+    update_user,
+    delete_user,
 
     insert_airline,
     update_airline,

@@ -301,9 +301,17 @@ const getAllTransactions=async () => {
 
 module.exports={
 
+    insertCountry,
+    deleteCountry,
+    updateCountry,
+
     insertAirline,
     deleteAirline,
     updateAirline,
+
+    insertUser,
+    updateUser,
+    deleteUser,
 
     deleteCustomer,
     updateCustomer,
@@ -318,6 +326,13 @@ module.exports={
     getAllTransactions
 
 }
+
+
+
+
+
+
+
 
 
 

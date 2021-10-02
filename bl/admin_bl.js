@@ -1,36 +1,12 @@
-/* const admin_deo=require('../admin_deo');
 
-const  getAllCustomers=async ()=>{
-
-    try {
-     const res=await admin_deo.getAllCustomers();
-     return res.rows;
-    }catch(e){
-        console.log (e.message)
- 
-    }
- }
-
- const  getAllTickets=async ()=>{
-
-    try {
-     const res=await admin_deo.getAllTickets();
-     return res.rows;
-    }catch(e){
-        console.log (e.message)
- 
-    }
- }
- */
- 
 const admin_deo=require('../admin_deo');
 
 
-const insertFlight= async (params)=>{
-    const {airline_id,origin_country_id,destination_country_id,departure_time,landing_time
-   ,remaining_tickets}=params;
+
+const insertCountry= async (params)=>{
+    const {name}=params;
     try{
-       const res=await admin_deo.insertFlight(airline_id,origin_country_id,destination_country_id,departure_time,landing_time,remaining_tickets);
+       const res=await admin_deo.insertCountry(name);
        return res;
 
     }catch(e){
@@ -40,11 +16,10 @@ const insertFlight= async (params)=>{
 
 }
 
-const updateFlight= async (params)=>{
-   const {id,airline_id,origin_country_id,destination_country_id,departure_time,landing_time
-  ,remaining_tickets}=params;
+const updateCountry= async (params)=>{
+   const {id,name}=params;
    try{
-      const res=await admin_deo.updateFlight(id,airline_id,origin_country_id,destination_country_id,departure_time,landing_time,remaining_tickets);
+      const res=await admin_deo.updateCountry(id,name);
       return res;
 
    }catch(e){
@@ -54,10 +29,10 @@ const updateFlight= async (params)=>{
 
 }
 
-const deleteFlight=async (params)=>{
+const deleteCountry=async (params)=>{
    const {id}=params
    try{
-       const res=await admin_deo.deleteFlight(id);
+       const res=await admin_deo.deleteCountry(id);
        return res;
 
     }catch(e){
@@ -177,9 +152,10 @@ const getAllTransactions=async ()=>{
 
  
 module.exports={
-    insertFlight,
-    updateFlight,
-    deleteFlight,
+ 
+    insertCountry,
+    updateCountry,
+    deleteCountry,
 
     insertUser,
     updateUser,
