@@ -12,6 +12,19 @@ const  getAllFlights=async ()=>{
  }
 
 
+ const  getAllCountries=async ()=>{
+
+    try {
+     const res=await anonymous_deo.getAllCountries();
+     return res.rows;
+    }catch(e){
+        console.log (e.message)
+ 
+    }
+ }
+
+
  module.exports={
-     getAllFlights
+     getAllFlights,
+     getAllCountries
  }

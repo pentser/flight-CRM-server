@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 
   const express=require('express');
   const anonymousRoutes=require('./routes/anonymousRoutes');
+  const adminRoutes=require('./routes/adminRoutes')
   const cors=require('cors');
   const app=express();
   const port=3000;
@@ -42,4 +43,5 @@ const dbURI = 'mongodb+srv://eli:Lvvf3gzFdKn8KuC@int2021.xduzl.mongodb.net/node-
 });
 
   app.use('/anonymous/api',anonymousRoutes);
+  app.use('/admin/api',adminRoutes); 
   
