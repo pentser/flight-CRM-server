@@ -7,6 +7,18 @@ router.get('/get_all_countries', anonymousController.get_all_countries);
 router.get('/get_all_flights', anonymousController.get_all_flights);
 router.get('/get_arrival_flights', anonymousController.get_arrival_flights);
 router.get('/get_departure_flights', anonymousController.get_departure_flights);
+/**
+*  @swagger
+*	/airlines/api/get_all_airlines_join?={id}:
+*     get:
+*       summary: Lists all the airlines with join
+*       tags: [airlines]
+*       responses:
+*         "200":
+*           description: The list of airlines.
+*           content:
+*             application/json:           
+*/
 router.get('/get_all_airlines_join', anonymousController.get_all_airlines_join);
 router.get('/get_flight_by_id', anonymousController.get_flight_by_id);
 router.get('/get_flight_by_airline_id', anonymousController.get_flight_by_airline_id);

@@ -51,51 +51,6 @@ const {trx_keeper}=require('../utils/transactionKeeper');
     
   }
 
-  insert_customer = async (req, res) => {
-    
-    try {
-        params=req.body;
-        const paramsAr=Object.values(params)
-        await trx_keeper(req.url,'insertCustomer',paramsAr);
-        result=await bl.insertCustomer(params);
-        res.send(result);
-      
-    }catch(e) {
-     console.log(e)
-    }
-    
-  }
-
-  update_customer = async (req, res) => {
-    
-    try {
-        params=req.body;
-        const paramsAr=Object.values(params)
-        await trx_keeper(req.url,'updateCustomer',paramsAr);
-        result=await bl.updateCustomer(params);
-        res.send(result);
-      
-    }catch(e) {
-     console.log(e)
-    }
-    
-  }
-
-  delete_customer = async (req, res) => {
-    
-    try {
-        params=req.body;
-        const paramsAr=Object.values(params)
-        await trx_keeper(req.url,'deleteCustomer',paramsAr);
-        result=await bl.deleteCustomer(params);
-        res.send(result);
-      
-    }catch(e) {
-     console.log(e)
-    }
-    
-  }
-
   insert_user = async (req, res) => {
     
     try {
@@ -133,6 +88,51 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'deleteUser',paramsAr);
         result=await bl.deleteUser(params);
+        res.send(result);
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
+  insert_customer = async (req, res) => {
+    
+    try {
+        params=req.body;
+        const paramsAr=Object.values(params)
+        await trx_keeper(req.url,'insertCustomer',paramsAr);
+        result=await bl.insertCustomer(params);
+        res.send(result);
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
+  update_customer = async (req, res) => {
+    
+    try {
+        params=req.body;
+        const paramsAr=Object.values(params)
+        await trx_keeper(req.url,'updateCustomer',paramsAr);
+        result=await bl.updateCustomer(params);
+        res.send(result);
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
+  delete_customer = async (req, res) => {
+    
+    try {
+        params=req.body;
+        const paramsAr=Object.values(params)
+        await trx_keeper(req.url,'deleteCustomer',paramsAr);
+        result=await bl.deleteCustomer(params);
         res.send(result);
       
     }catch(e) {
@@ -229,6 +229,21 @@ const {trx_keeper}=require('../utils/transactionKeeper');
     
   }
 
+  get_user_by_user = async (req, res) => {
+    
+    try {
+        params=req.body;
+        const paramsAr=Object.values(params)
+        await trx_keeper(req.url,'getUserByUser',paramsAr);
+        result=await bl.getUserByUser(params);
+        res.send(result);
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
 
 
   
@@ -251,7 +266,8 @@ const {trx_keeper}=require('../utils/transactionKeeper');
     get_all_customers,
     get_all_tickets,
     get_user_by_id,
-    get_admin_by_user
+    get_admin_by_user,
+    get_user_by_user
 
   }
 

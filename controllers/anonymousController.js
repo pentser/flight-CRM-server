@@ -119,6 +119,26 @@ get_all_countries = async (req, res) => {
     
   }
 
+  get_airline_by_id = async (req, res) => {
+    
+    try {
+        
+        params=req.query;
+        const paramsAr=Object.values(params)
+        const action= await trx_keeper(req.url,'getAirlineById', paramsAr);
+        if(action) {
+          result=await bl.getAirlineById(params);
+          res.send(result);
+
+        }
+      
+      
+    }catch(e) {
+     console.log(e)
+    }
+    
+  }
+
   get_flight_by_airline_id = async (req, res) => {
     
     try {
@@ -138,6 +158,7 @@ get_all_countries = async (req, res) => {
     }
     
   }
+
 
   get_flights_by_parameters = async (req, res) => {
     
@@ -189,8 +210,10 @@ module.exports={
     get_departure_flights,
     get_all_airlines_join,
     get_flight_by_airline_id,
+    get_airline_by_id,
     get_flight_by_id,
     get_flights_by_parameters,
-    check_username_availability
+    check_username_availability,
+
 
 }

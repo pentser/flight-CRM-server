@@ -281,7 +281,11 @@ const getAllTransactions=async () => {
     }
  }
 
+
+
+
 //
+
    const Pool = require('pg').Pool
    const pool = new Pool({
   user: 'postgres',
@@ -301,17 +305,9 @@ const getAllTransactions=async () => {
 
 module.exports={
 
-    insertCountry,
-    deleteCountry,
-    updateCountry,
-
     insertAirline,
     deleteAirline,
     updateAirline,
-
-    insertUser,
-    updateUser,
-    deleteUser,
 
     deleteCustomer,
     updateCustomer,
@@ -326,13 +322,6 @@ module.exports={
     getAllTransactions
 
 }
-
-
-
-
-
-
-
 
 
 

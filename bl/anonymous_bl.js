@@ -67,6 +67,17 @@ const  getAllFlights=async ()=>{
    }
 }
 
+const getAirlineById=async (params)=>{
+    const {id}=params
+   try {
+    const res=await anonymous_deo.AirlineById(id)
+    return res.rows[0];
+   }catch(e){
+       console.log (e.message)
+
+   }
+}
+
 const getFlightByAirlineId=async (params)=>{
     const {id}=params
    try {
@@ -111,6 +122,7 @@ module.exports={
     getFlightById,
     getFlightByAirlineId,
     getFlightByParameters,
-    checkUsernameAvailability
+    checkUsernameAvailability,
+    getAirlineById
 
 }
