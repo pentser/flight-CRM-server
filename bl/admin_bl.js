@@ -9,7 +9,8 @@ const insertUser= async (params)=>{
       return res;
 
    }catch(e){
-      console.log (e.message)
+      console.log (e.message);
+      return new Error(e.message);
    }
 
 
@@ -22,7 +23,8 @@ const updateUser= async (params)=>{
      return res;
 
   }catch(e){
-     console.log (e.message)
+     console.log (e.message);
+     return new Error('user not exist');
   }
 
 
@@ -35,7 +37,9 @@ const deleteUser=async (params)=>{
       return res;
 
    }catch(e){
-      console.log (e.message)
+      console.log (e.message);
+      return new Error('user not exist');
+
    }
 
 }
@@ -46,7 +50,10 @@ const  getAllUsers=async ()=>{
     const res=await admin_deo.getAllUsers();
     return res.rows;
    }catch(e){
-       console.log (e.message)
+       console.log (e.message);
+       return new Error(e.message);
+      
+
 
    }
 }
@@ -57,7 +64,8 @@ const  getAllTickets=async ()=>{
     const res=await admin_deo.getAllTickets();
     return res.rows;
    }catch(e){
-       console.log (e.message)
+       console.log (e.message);
+       return new Error(e.message);
 
    }
 }
@@ -68,7 +76,7 @@ const  getAllCustomers=async ()=>{
     const res=await admin_deo.getAllCustomers();
     return res.rows;
    }catch(e){
-       console.log (e.message)
+      return new Error(e.message);
 
    }
 }
@@ -80,7 +88,7 @@ const getUserById= async (params)=>{
       return res;
  
    }catch(e){
-      console.log (e.message)
+      return new Error('user id not exist');
    }
  
  
@@ -93,7 +101,9 @@ const getUserById= async (params)=>{
       return res;
  
    }catch(e){
-      console.log (e.message)
+      console.log (e.message);
+      return new Error('user not exist');
+
    }
  
  
@@ -106,7 +116,8 @@ const getUserById= async (params)=>{
     const res=await admin_deo.getAllTransactions();
     return res
    }catch(e){
-       console.log (e.message)
+       console.log (e.message);
+       return new Error(e.message);
 
    }
 }

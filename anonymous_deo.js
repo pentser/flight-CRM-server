@@ -131,11 +131,10 @@ const getFlightByParameters=async (_origin_country_id,_destination_country_id,_d
     
 }
 
-const checkUsernameAvailability=async (_username) => {
-   
+const checkUsernameAvailability=async (email) => {
     try{
 
-        const result=await rawRepo.getRowResult(`select * from get_flights_by_parameters(${_id})`);
+        const result=await rawRepo.getRowResult(`select * from get_user_by_email(${email})`);
         return result;
     } catch(e){
         console.log(e.message);

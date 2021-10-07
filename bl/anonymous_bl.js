@@ -7,7 +7,8 @@ const  getAllCountries=async ()=>{
     const res=await anonymous_deo.getAllCountries();
     return res.rows;
    }catch(e){
-       console.log (e.message)
+       console.log (e.message);
+       return new Error(e.message);
 
    }
 }
@@ -18,7 +19,8 @@ const  getAllFlights=async ()=>{
      const res=await anonymous_deo.getAllFlights();
      return res.rows;
     }catch(e){
-        console.log (e.message)
+        console.log (e.message);
+        return new Error(e.message);
  
     }
  }
@@ -29,7 +31,8 @@ const  getAllFlights=async ()=>{
      const res=await anonymous_deo.getArrivalFlights();
      return res.rows;
     }catch(e){
-        console.log (e.message)
+        console.log (e.message);
+        return new Error(e.message);
  
     }
  }
@@ -40,7 +43,8 @@ const  getAllFlights=async ()=>{
      const res=await anonymous_deo.getDepartureFlights();
      return res.rows;
     }catch(e){
-        console.log (e.message)
+        console.log (e.message);
+        return new Error(e.message);
  
     }
  }
@@ -51,7 +55,8 @@ const  getAllFlights=async ()=>{
      const res=await anonymous_deo.getAllAirlinesJoin();
      return res.rows;
     }catch(e){
-        console.log (e.message)
+        console.log (e.message);
+        return new Error(e.message);
  
     }
  }
@@ -63,6 +68,7 @@ const  getAllFlights=async ()=>{
     return res.rows[0];
    }catch(e){
        console.log (e.message)
+       return new Error('id not exist');
 
    }
 }
@@ -73,7 +79,8 @@ const getAirlineById=async (params)=>{
     const res=await anonymous_deo.AirlineById(id)
     return res.rows[0];
    }catch(e){
-       console.log (e.message)
+       console.log (e.message);
+       return new Error('id not exist');
 
    }
 }
@@ -84,7 +91,8 @@ const getFlightByAirlineId=async (params)=>{
     const res=await anonymous_deo.getFlightByAirlineId(id)
     return res.rows[0];
    }catch(e){
-       console.log (e.message)
+       console.log (e.message);
+       return new Error('id not exist');
 
    }
 }
@@ -96,6 +104,7 @@ const getFlightByParameters=async (params)=>{
     return res.rows[0];
    }catch(e){
        console.log (e.message)
+       return new Error(e,message);
 
    }
 }
@@ -106,7 +115,8 @@ const checkUsernameAvailability=  async (params)=>{
         const res=await anonymous_deo.checkUsernameAvailability(username)
         return res.rows[0];
        }catch(e){
-           console.log (e.message)
+           console.log (e.message);
+           return new Error(e.message);
     
        }
 }

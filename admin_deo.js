@@ -261,7 +261,8 @@ const getUserByUser=async (_user_name) => {
     try {
 
         const result=await rawRepo.getRowResult(`select * from sp_get_user_by_username('${_user_name}')`);
-        return result.rows[0].sp_get_user_by_username;
+        //return result.rows[0].sp_get_user_by_username;
+        return result;
 
     } catch(e) {
         console.log(e.message);
