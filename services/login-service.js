@@ -30,12 +30,12 @@ const handleErrors = (err) => {
 
 
 
-const tryLogin = async (user,password)=> {
- 
+const tryLogin = async (params)=> {
+/*  
     const params={
         user,
         password
-    }
+    } */
     let token=null;
     let typeOfUser={};
    try {
@@ -43,7 +43,6 @@ const tryLogin = async (user,password)=> {
 
      // if user exist
     if(user) {
-        console.log("type",typeof user)
          // if password are equal
         if(user.password===password) {
 

@@ -3,6 +3,7 @@ const {trx_keeper}=require('../utils/transactionKeeper');
 //const User = require("../models/User");
 const bl= require('../bl/login_bl');
 const config=require('config');
+const {tryLogin} =require('../services/login-service');
 
 
 // handle errors
@@ -51,15 +52,14 @@ login_post = async (req,res) => {
         params=req.body;
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'login',paramsAr);
-        user=await bl.getUserByUser(params);
-        // user exists
-        if(user.rows.length) {
-          const token=createToken(user.rows[0].id);
+        token=await tryLogin(params);
+         if(token) {
           res.cookie('jwt', token, { httpOnly: true, maxAge: config.get('ttl')*1000 });
           res.status(200).json({ user: user.rows});
         }
-        else {
-          res.status(400).json({user:"not found"})
+        else{
+   
+          res.status(400).json({err:"not found"})
         }
        
       
