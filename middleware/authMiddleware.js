@@ -9,7 +9,7 @@ const requireAuth = (req, res, next) => {
   // check json web token exists & is verified
   if (token) {
     jwt.verify(token, config.get('privateKey'), (err, decodedToken) => {
-      if (err) {config.get('privateKey')
+      if (err) {
         console.log(err.message);
         res.redirect('/login'); // in ajax act differently
       } else {
@@ -29,16 +29,15 @@ const checkUser = (req, res, next) => {
     if (token) {
       jwt.verify(token,config.get('privateKey'), async (err, decodedToken) => {
         if (err) {
-          res.locals.user = null;
-          next(); // ?? bad token
+          console.log(err.message);
+          res.send('bad token');
         } else {
-          let user = await User.findById(decodedToken.id);
-          res.locals.user = user; // ? . better user-id, name
+          res.locals.token= decodedToken;
           next(); 
         }
       });
     } else {
-      res.locals.user = null;
+      res.status(401).redirect("/");
       next();
     }
   };

@@ -19,9 +19,9 @@ const getUserByUser= async (params)=>{
  }
 
  const getCustomerByUser= async (params)=>{
-    const {user}=params;
+    const {username}=params;
     try{
-       const res=customer_deo.getCustomerByUser(user);
+       const res=await customer_deo.getCustomerByUser(username);
        return res;
   
     }catch(e){
@@ -33,9 +33,9 @@ const getUserByUser= async (params)=>{
 
 
 const getAirlineByUser= async (params)=>{
-    const {user}=params;
+    const {username}=params;
     try{
-       const res=airline_deo.getAirlineByUserByUser(user);
+       const res=await airline_deo.getAirlineByUserByUser(username);
        return res;
   
     }catch(e){
@@ -45,9 +45,9 @@ const getAirlineByUser= async (params)=>{
 }
    
     const getAdminByUser= async (params)=>{
-        const {user}=params;
+        const {username}=params;
         try{
-           const res=await admin_deo.getAdminByUser(user);
+           const res=await admin_deo.getAdminByUser(username);
            return res;
       
         }catch(e){

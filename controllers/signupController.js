@@ -1,5 +1,13 @@
 const {trx_keeper}=require('../utils/transactionKeeper');
 
+// create json web token
+const maxAge = 3 * 24 * 60 * 60;
+const createToken = (id) => {
+  return jwt.sign({ id }, 'secret key', {
+    expiresIn: maxAge
+  });
+};
+
 const handleErrors = (err) => {
   console.log(err.message, err.code);
   let errors = { user: '', password: '' };
@@ -53,6 +61,7 @@ signup_post = async (req, res) => {
   const { user,password,email,rule } = req.body;
 
   try {
+    
     const user = new User(user, password,email,rule);
     const token = createToken(user.id);
     res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });

@@ -53,7 +53,7 @@ const dbURI = 'mongodb+srv://eli:Lvvf3gzFdKn8KuC@int2021.xduzl.mongodb.net/node-
   });
 });
 
-app.use( checkUser);
+  //app.get( '*',checkUser);
   app.use('/',loginRoutes);
   app.use('/',signupRoutes);
   app.use('/anonymous/api',anonymousRoutes);

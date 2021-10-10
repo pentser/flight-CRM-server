@@ -98,7 +98,7 @@ const getCustomerByUser=async (_user) => {
    
     try{
 
-        const result=await rawRepo.getRowResult(`select * from sp_get_customer_by_user(${_user})`);
+        const result=await rawRepo.getRowResult(`select * from sp_get_customer_by_user('${_user}')`);
         return result;
     } catch(e){
         console.log(e.message);

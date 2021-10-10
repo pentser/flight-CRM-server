@@ -2,66 +2,38 @@ const bl=require('../bl/login_bl');
  const jwt=require('jsonwebtoken');
  const config=require('config');
 
-/*  // handle errors
-const handleErrors = (err) => {
-    console.log(err.message, err.code);
-    let errors = { user: '', password: '' };
-  
-    // incorrect user
-    if (err.message === 'incorrect user') {
-      errors.user = 'That user is not registered';
-    }
-  
-    // incorrect password
-    if (err.message === 'incorrect password') {
-      errors.password = 'That password is incorrect';
-    }
-  
-  
-    // validation errors
-    if (err.message.includes('user validation failed')) {
-      Object.values(err.errors).forEach(({ properties }) => {
-        errors[properties.path] = properties.message;
-      });
-    }
-    return errors;
-  } */
-
 
 
 
 const tryLogin = async (params)=> {
-/*  
-    const params={
-        user,
-        password
-    } */
+
     let token=null;
     let typeOfUser={};
    try {
-    const user=await bl.getUserByUser(params);
+    const res=await bl.getUserByUser(params);
 
+    const user=res.rows[0];
      // if user exist
     if(user) {
          // if password are equal
-        if(user.password===password) {
+        if(user.password===params.password) {
 
             switch (user.rule) {
-                case value:"Customer"
-                     typeOfUser=bl.getCustomerByUser(user);
+                case "Customer":
+                     typeOfUser=await bl.getCustomerByUser(user);
                     break;
-                case value:"Airline"
-                    typeOfUser=bl.getAirlineByUser(user);
+                case "Airline":
+                    typeOfUser=await bl.getAirlineByUser(user);
                     break;
-                case value:"Admin"
-                    typeOfUser=bl.getAdminByUser(user);
+                case "Admin":
+                    typeOfUser=await bl.getAdminByUser(user);
                     break;
                 default:
                     //anonymous typeOfUser={}            
                     break;
             }
               
-           token=createToken(typeOfUser);
+           token=createToken(typeOfUser.rows[0]);
         }
         else {
             throw Error("incorrect user")
