@@ -8,17 +8,17 @@ const bl=require('../bl/login_bl');
 const tryLogin = async (params)=> {
 
     let token=null;
-    let typeOfUser={};
+    //let typeOfUser={};
    try {
     const res=await bl.getUserByUser(params);
 
     const user=res.rows[0];
      // if user exist
-    if(user) {
+    if(user.id) {
          // if password are equal
         if(user.password===params.password) {
 
-            switch (user.rule) {
+         /*    switch (user.rule) {
                 case "Customer":
                      typeOfUser=await bl.getCustomerByUser(user);
                     break;
@@ -31,9 +31,9 @@ const tryLogin = async (params)=> {
                 default:
                     //anonymous typeOfUser={}            
                     break;
-            }
+            } */
               
-           token=createToken(typeOfUser.rows[0]);
+           token=createToken(user.id);
         }
         else {
             throw Error("incorrect user")
@@ -51,10 +51,10 @@ const tryLogin = async (params)=> {
 }
 }
 
- const createToken = (typeOfUser) => {
-  return jwt.sign(typeOfUser, config.get('privateKey'), {
-    expiresIn: config.get("ttl")
-  });
+ const createToken = (id) => {
+  return jwt.sign({id}, config.get('privateKey'), 
+    {expiresIn: config.get('ttl')}
+  );
 }; 
 
 
