@@ -121,6 +121,20 @@ const getUserById= async (params)=>{
 
    }
 }
+
+
+const getUserByUser= async (params)=>{
+   const {user}=params;
+   try{
+      const res=await admin_deo.getUserByUser(user);
+      return res;
+ 
+   }catch(e){
+      console.log (e.message);
+      return new Error('username not exists')
+   }
+ 
+ }
  
 
 
@@ -153,9 +167,11 @@ module.exports={
     getAllTickets,
     getAllCustomers,
     getUserById,
+    getUserByUser,
     getAdminByUser,
 
-    getAllTransactions
+    getAllTransactions,
+    
 
 
 }

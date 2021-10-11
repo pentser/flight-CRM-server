@@ -1,4 +1,4 @@
-const bl=require('../bl/login_bl');
+const bl=require('../bl/admin_bl');
  const jwt=require('jsonwebtoken');
  const config=require('config');
 
@@ -51,6 +51,41 @@ const tryLogin = async (params)=> {
 }
 }
 
+const trySignup = async (params)=> {
+
+   
+    let token=null;
+  
+   try {
+    const res=await bl.getUserByUser(params);
+
+    const user=res.rows[0];
+     // if user exist
+    if(user) {
+         // if user exists
+            throw Error("user exist")    
+    }
+    else {
+        // create user
+        const res=await bl.insertUser(params);
+        console.log(res);
+        if(res) {
+            token=createToken(user.id);
+        }
+        else{
+            throw Error("Error insertUser")    
+        }
+    }
+
+    return token;
+
+} catch(e) {
+    throw Error(e);
+}
+}
+
+
+
  const createToken = (id) => {
   return jwt.sign({id}, config.get('privateKey'), 
     {expiresIn: config.get('ttl')}
@@ -61,5 +96,6 @@ const tryLogin = async (params)=> {
 
 
 module.exports={
-    tryLogin
+    tryLogin,
+    trySignup
 }

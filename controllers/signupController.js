@@ -1,5 +1,6 @@
 const {trx_keeper}=require('../utils/transactionKeeper');
 const logger=require('../utils/logger');
+const { trySignup } = require('../services/login-service');
 
 
 // create json web token
@@ -63,25 +64,30 @@ signup_get = async (req, res) => {
   
 }
 
-signup_post = async (req, res) => {
-  const { user,password,email,rule } = req.body;
-
-  try {
+signup_post = async (req,res) => {
     
-    //const user = new User(user, password,email,rule);
-    const token = createToken(user.id);
-    res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
-    res.status(201).json({ user: user._id });
-  }
-  catch(err) {
-    const errors = handleErrors(err);
-    res.status(400).json({ errors });
-    logger.log({
-      level: 'error',
-     message: `error  signup_post:,${err}`
-  });
-  }
+  try {
+      params=req.body;
+      const paramsAr=Object.values(params)
+      await trx_keeper(req.url,'signup',paramsAr);
+      token=await trySignup(params);
+       if(token) {
+        res.cookie('jwt', token, { httpOnly: true, maxAge: config.get('ttl')*1000 });
+        res.status(200).json({ token});
+      }
+      else{
  
+        res.status(400).json({err:"invalid signup"})
+      }
+     
+    
+  }catch(e) {
+   console.log(e);
+   logger.log({
+    level: 'error',
+   message: `error  signup_post:,${e}`
+});
+  }
 }
 
 
