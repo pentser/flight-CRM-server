@@ -14,7 +14,7 @@ const tryLogin = async (params)=> {
 
     const user=res.rows[0];
      // if user exist
-    if(user.id) {
+    if(user) {
          // if password are equal
         if(user.password===params.password) {
 

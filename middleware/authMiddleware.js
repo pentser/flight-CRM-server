@@ -32,7 +32,8 @@ const checkUser = (req, res, next) => {
           console.log(err.message);
           res.send('bad token');
         } else {
-          res.locals.token= decodedToken;
+         //res.locals.token= decodedToken;
+          console.log(decodedToken);
           next(); 
         }
       });
