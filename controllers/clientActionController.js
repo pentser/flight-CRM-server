@@ -1,4 +1,6 @@
 const {get_all_transactions}=require('../utils/transactionKeeper');
+const logger=require('../utils/logger');
+
 
 module.exports.get_all_transactions = async (req, res) => {
     try { 
@@ -7,6 +9,11 @@ module.exports.get_all_transactions = async (req, res) => {
     }
     catch (e) {
         res.status(400).json({e});
+        logger.log({
+            level: 'error',
+           message: `error  get_all_transactions:,${e}`
+        });
+        
     }
 
 }

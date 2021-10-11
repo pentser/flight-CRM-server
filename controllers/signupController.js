@@ -1,4 +1,6 @@
 const {trx_keeper}=require('../utils/transactionKeeper');
+const logger=require('../utils/logger');
+
 
 // create json web token
 const maxAge = 3 * 24 * 60 * 60;
@@ -52,7 +54,11 @@ signup_get = async (req, res) => {
       }     
     
   }catch(e) {
-   console.log(e)
+   console.log(e);
+   logger.log({
+    level: 'error',
+   message: `error  signup_get:,${e}`
+});
   }
   
 }
@@ -62,7 +68,7 @@ signup_post = async (req, res) => {
 
   try {
     
-    const user = new User(user, password,email,rule);
+    //const user = new User(user, password,email,rule);
     const token = createToken(user.id);
     res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 });
     res.status(201).json({ user: user._id });
@@ -70,6 +76,10 @@ signup_post = async (req, res) => {
   catch(err) {
     const errors = handleErrors(err);
     res.status(400).json({ errors });
+    logger.log({
+      level: 'error',
+     message: `error  signup_post:,${err}`
+  });
   }
  
 }

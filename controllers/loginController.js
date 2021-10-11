@@ -2,6 +2,9 @@ const {trx_keeper}=require('../utils/transactionKeeper');
 const bl= require('../bl/login_bl');
 const config=require('config');
 const {tryLogin} =require('../services/login-service');
+const logger=require('../utils/logger');
+
+
 
 
 
@@ -23,7 +26,11 @@ login_post = async (req,res) => {
        
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  login_post:,${e}`
+  });
     }
   }
 
@@ -41,7 +48,11 @@ login_get = async (req, res) => {
         }     
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  login_get:,${e}`
+  });
     }
     
   }

@@ -1,5 +1,7 @@
 const bl= require('../bl/airline_bl');
 const {trx_keeper}=require('../utils/transactionKeeper');
+const logger=require('../utils/logger');
+
 
 
 
@@ -30,7 +32,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  insert_flight:,${e}`
+  });
     }
     
   }
@@ -45,7 +51,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  update_flight:,${e}`
+  });
     }
     
   }
@@ -60,7 +70,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  delete_flight:,${e}`
+  });
     }
     
   }
@@ -75,7 +89,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_airline_by_user:,${e}`
+  });
     }
     
   }

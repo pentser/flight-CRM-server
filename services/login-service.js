@@ -36,12 +36,12 @@ const tryLogin = async (params)=> {
            token=createToken(user.id);
         }
         else {
-            throw Error("incorrect user")
+            throw Error("incorrect password")
         }
     }
     else {
       
-        throw Error("incorrect password")
+        throw Error("incorrect user")
     }
 
     return token;

@@ -1,5 +1,7 @@
 const bl= require('../bl/anonymous_bl');
 const {trx_keeper}=require('../utils/transactionKeeper');
+const logger=require('../utils/logger');
+
 
 
 
@@ -18,7 +20,11 @@ get_all_countries = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_all_countries:,${e}`
+  });
     }
     
   }
@@ -37,7 +43,11 @@ get_all_countries = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_all_flights:,${e}`
+  });
     }
     
   }
@@ -56,7 +66,11 @@ get_all_countries = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_arrival_flights:,${e}`
+  });
     }
     
   }
@@ -75,7 +89,11 @@ get_all_countries = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_departure_flights:,${e}`
+  });
     }
     
   }
@@ -94,7 +112,11 @@ get_all_countries = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_all_airlines_join:,${e}`
+  });
     }
     
   }
@@ -114,7 +136,11 @@ get_all_countries = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_flight_by_id:,${e}`
+  });
     }
     
   }
@@ -134,7 +160,11 @@ get_all_countries = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_airline_by_id:,${e}`
+  });
     }
     
   }
@@ -154,7 +184,11 @@ get_all_countries = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_flight_by_airline_id:,${e}`
+  });
     }
     
   }
@@ -175,7 +209,11 @@ get_all_countries = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_flights_by_parameters:,${e}`
+  });
     }
     
   }
@@ -195,7 +233,11 @@ get_all_countries = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  check_username_availability:,${e}`
+  });
     }
     
   }

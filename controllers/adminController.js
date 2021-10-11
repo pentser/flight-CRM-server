@@ -1,5 +1,7 @@
 const bl= require('../bl/admin_bl');
 const {trx_keeper}=require('../utils/transactionKeeper');
+const logger=require('../utils/logger');
+
 
 
 
@@ -16,7 +18,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  insert_airline:,${e}`
+  });
     }
     
   }
@@ -31,7 +37,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  update_airline:,${e}`
+  });
     }
     
   }
@@ -46,7 +56,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  delete_airline:,${e}`
+  });
     }
     
   }
@@ -61,7 +75,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  insert_user:,${e}`
+  });
     }
     
   }
@@ -76,7 +94,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  update_user:,${e}`
+  });
     }
     
   }
@@ -106,7 +128,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  insert_customer:,${e}`
+  });
     }
     
   }
@@ -121,7 +147,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  update_customer:,${e}`
+  });
     }
     
   }
@@ -136,7 +166,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  delete_customer:,${e}`
+  });
     }
     
   }
@@ -155,7 +189,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_all_users:,${e}`
+  });
     }
     
   }
@@ -193,7 +231,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_all_tickets:,${e}`
+  });
     }
     
   }
@@ -208,7 +250,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_user_by_id:,${e}`
+  });
     }
     
   }
@@ -224,7 +270,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_admin_by_user:,${e}`
+  });
     }
     
   }
@@ -239,7 +289,11 @@ const {trx_keeper}=require('../utils/transactionKeeper');
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_user_by_user:,${e}`
+  });
     }
     
   }

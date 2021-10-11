@@ -1,5 +1,7 @@
 const bl= require('../bl/customer_bl');
 const {trx_keeper}=require('../utils/transactionKeeper');
+const logger=require('../utils/logger');
+
 
 
 
@@ -19,7 +21,11 @@ get_customer_by_id = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_customer_by_id:,${e}`
+  });
     }
     
   }
@@ -39,7 +45,11 @@ get_customer_by_id = async (req, res) => {
       
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_country_by_id:,${e}`
+  });
     }
     
   }
@@ -57,7 +67,11 @@ get_customer_by_id = async (req, res) => {
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_ticket_by_customer:,${e}`
+  });
     }
     
   }
@@ -74,7 +88,11 @@ get_customer_by_id = async (req, res) => {
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  update_customer:,${e}`
+  });
     }
     
   }
@@ -89,7 +107,11 @@ get_customer_by_id = async (req, res) => {
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  insert_ticket:,${e}`
+  });
     }
     
   }
@@ -104,7 +126,11 @@ get_customer_by_id = async (req, res) => {
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  update_ticket:,${e}`
+  });
     }
     
   }
@@ -119,7 +145,11 @@ get_customer_by_id = async (req, res) => {
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  delete_ticket:,${e}`
+  });
     }
     
   }
@@ -135,7 +165,11 @@ get_customer_by_id = async (req, res) => {
         res.send(result);
       
     }catch(e) {
-     console.log(e)
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_customer_by_user:,${e}`
+  });
     }
     
   }
