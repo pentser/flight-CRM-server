@@ -66,11 +66,19 @@ logout_get= async (req,res) =>{
 
 }
 
+read_cookies= async (req, res) => {
+  //const cookies = req.cookies;
+  console.log(req.url)
+  console.log(req.cookies.jwt);
+  res.json({ cookie1: req.cookies.jwt });
+};
+
 
 module.exports={
     login_post,
     login_get,
-    logout_get
+    logout_get,
+    read_cookies
 }
 
 
