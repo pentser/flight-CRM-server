@@ -69,16 +69,37 @@ logout_get= async (req,res) =>{
 read_cookies= async (req, res) => {
   //const cookies = req.cookies;
   console.log(req.url)
-  console.log(req.cookies.jwt);
-  res.json({ cookie1: req.cookies.jwt });
+  console.log(req.cookies);
+  res.json({ cookie1: req.cookies.token });
 };
+
+read_header=async (req, res) => {
+  // jwt from header
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+      const token = authHeader.split(' ')[1];
+      const jwt = require('jsonwebtoken');
+      jwt.verify(token,config.get('privateKey'), (err, user) => {
+          if (err) {
+              return res.sendStatus(403);
+          }
+          res.json({ token: user });
+      });
+  }
+  else { 
+    return res.sendStatus(403);
+  }
+}; 
+
 
 
 module.exports={
     login_post,
     login_get,
     logout_get,
-    read_cookies
+    read_cookies,
+    read_header
 }
 
 
