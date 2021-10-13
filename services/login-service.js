@@ -8,6 +8,7 @@ const bl=require('../bl/admin_bl');
 const tryLogin = async (params)=> {
 
     let token=null;
+    let userData=null;
     //let typeOfUser={};
    try {
     const res=await bl.getUserByUser(params);
@@ -32,8 +33,10 @@ const tryLogin = async (params)=> {
                     //anonymous typeOfUser={}            
                     break;
             } */
-              
+             
+           userData=user;
            token=createToken(user.id);
+           
         }
         else {
             throw Error("incorrect password")
@@ -44,7 +47,7 @@ const tryLogin = async (params)=> {
         throw Error("incorrect user")
     }
 
-    return token;
+    return {userData,token};
 
 } catch(e) {
     throw Error(e);
@@ -55,6 +58,7 @@ const trySignup = async (params)=> {
 
    
     let token=null;
+    let userData=null;
   
    try {
     const res=await bl.getUserByUser(params);
@@ -71,13 +75,14 @@ const trySignup = async (params)=> {
         console.log(res);
         if(res) {
             token=createToken(user.id);
+            userData=user;
         }
         else{
             throw Error("Error insertUser")    
         }
     }
 
-    return token;
+    return {token,userData};
 
 } catch(e) {
     throw Error(e);

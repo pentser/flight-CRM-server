@@ -35,7 +35,7 @@ const dbURI = 'mongodb+srv://eli:Lvvf3gzFdKn8KuC@int2021.xduzl.mongodb.net/node-
 
   mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
   .then((result) => {
-    console.log(result.connection) ;
+    //console.log(result.connection) ;
     app.listen(3000, () =>
     {
       console.log(`click on http://localhost:${port}`);
@@ -53,7 +53,7 @@ const dbURI = 'mongodb+srv://eli:Lvvf3gzFdKn8KuC@int2021.xduzl.mongodb.net/node-
   });
 });
 
- // app.get( '*',checkUser);
+  //app.get( '*',checkUser);
   app.use('/',loginRoutes);
   app.use('/',signupRoutes);
   app.use('/anonymous/api',anonymousRoutes);

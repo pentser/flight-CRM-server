@@ -11,7 +11,7 @@ const requireAuth = (req, res, next) => {
     jwt.verify(token, config.get('privateKey'), (err, decodedToken) => {
       if (err) {
         console.log(err.message);
-        res.redirect('/login'); // in ajax act differently
+        //res.redirect('/login'); // in ajax act differently
       } else {
           // we may here- check the user role ...
         console.log(decodedToken);
@@ -19,7 +19,7 @@ const requireAuth = (req, res, next) => {
       }
     });
   } else {
-    res.redirect('/signout'); // in ajax act differently
+   // res.redirect('/signout'); // in ajax act differently
   }
 };
 
@@ -38,7 +38,7 @@ const checkUser = (req, res, next) => {
         }
       });
     } else {
-      res.status(401).redirect("/");
+      res.status(401)//.redirect("/");
       next();
     }
   };

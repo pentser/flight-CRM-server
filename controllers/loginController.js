@@ -13,10 +13,11 @@ login_post = async (req,res) => {
         params=req.body;
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'login',paramsAr);
-        token=await tryLogin(params);
+        let {userData,token}=await tryLogin(params);
          if(token) {
           res.cookie('jwt', token, { httpOnly: true, maxAge: config.get('ttl')*1000 });
-          res.status(200).json({ token});
+          res.cookie('user',{user,email,rule}=userData,{ httpOnly: true, maxAge: config.get('ttl')*1000 })
+          res.status(200).json({ token,user,email,rule});
         }
         else{
    
@@ -59,6 +60,7 @@ login_get = async (req, res) => {
 logout_get= async (req,res) =>{
 
   res.cookie('jwt', '', { maxAge: 1 });
+  res.cookie('user', '', { maxAge: 1 });
   res.redirect('/');
 
 }
