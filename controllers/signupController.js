@@ -36,8 +36,8 @@ signup_post = async (req,res) => {
       let {userData,token}=await trySignup(params);
        if(token) {
         res.cookie('jwt', token, { httpOnly: true, maxAge: config.get('ttl')*1000 });
-        res.cookie('user',{user,email,rule}=userData,{ httpOnly: true, maxAge: config.get('ttl')*1000 })
-        res.status(200).json({ token,user,email,rule});
+        res.cookie('user',{username,email,rule}=userData,{ httpOnly: true, maxAge: config.get('ttl')*1000 })
+        res.status(200).json({ token,username,email,rule});
       }
       else{
  

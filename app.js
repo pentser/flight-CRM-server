@@ -26,7 +26,8 @@ const mongoose = require('mongoose');
   app.use(express.urlencoded({extended:true}));
   
   app.use(cors({
-    origin:'*'
+    origin:'*',
+    credentials: 'include',
   }))
 
   // database connection
