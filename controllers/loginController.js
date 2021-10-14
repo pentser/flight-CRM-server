@@ -84,7 +84,7 @@ read_header=async (req, res) => {
           if (err) {
               return res.sendStatus(403);
           }
-          res.json({ token: user });
+          return res.json({token:user})
       });
   }
   else { 
