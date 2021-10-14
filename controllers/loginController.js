@@ -19,6 +19,7 @@ login_post = async (req,res) => {
           res.cookie('jwt', token, { httpOnly: true, maxAge: config.get('ttl')*1000 });
           res.cookie('user',{username,email,rule}=userData,{ httpOnly: true, maxAge: config.get('ttl')*1000 });
           res.status(200).json({ token,username,email,rule});
+        
         }
         else{
    
@@ -70,7 +71,7 @@ read_cookies= async (req, res) => {
   //const cookies = req.cookies;
   console.log(req.url)
   console.log(req.cookies);
-  res.json({ cookie1: req.cookies.token });
+  return res.json({ cookie1: req.cookies.token });
 };
 
 read_header=async (req, res) => {

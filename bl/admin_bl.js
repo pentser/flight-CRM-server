@@ -95,9 +95,9 @@ const getUserById= async (params)=>{
  }
 
  const getAdminByUser= async (params)=>{
-   const {user}=params;
+   const {username}=params;
    try{
-      const res=await admin_deo.getAdminByUser(user);
+      const res=await admin_deo.getAdminByUser(username);
       return res;
  
    }catch(e){
@@ -124,9 +124,9 @@ const getUserById= async (params)=>{
 
 
 const getUserByUser= async (params)=>{
-   const {user}=params;
+   const {username}=params;
    try{
-      const res=await admin_deo.getUserByUser(user);
+      const res=await admin_deo.getUserByUser(username);
       return res;
  
    }catch(e){
