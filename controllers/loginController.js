@@ -15,7 +15,8 @@ login_post = async (req,res) => {
         await trx_keeper(req.url,'login',paramsAr);
         let {userData,token}=await tryLogin(params);
          if(token) {
-       
+          
+          //res.cookie('elip',"randomNumber", { maxAge: 900000, httpOnly: true })
           res.cookie('jwt', token, { httpOnly: true, maxAge: config.get('ttl')*1000 });
           res.cookie('user',{username,email,rule}=userData,{ httpOnly: true, maxAge: config.get('ttl')*1000 });
           res.status(200).json({ token,username,email,rule});
@@ -68,10 +69,11 @@ logout_get= async (req,res) =>{
 }
 
 read_cookies= async (req, res) => {
-  //const cookies = req.cookies;
+ 
   console.log(req.url)
   console.log(req.cookies);
   return res.json({ jwt: req.cookies.token,user: req.cookies.user });
+
 
 };
 
@@ -96,12 +98,17 @@ read_header=async (req, res) => {
 
 
 
+
+
+
+
 module.exports={
     login_post,
     login_get,
     logout_get,
     read_cookies,
-    read_header
+    read_header,
+  
 }
 
 

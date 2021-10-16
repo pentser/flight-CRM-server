@@ -16,6 +16,7 @@ const mongoose = require('mongoose');
 
   const cookieParser = require('cookie-parser');
   const { requireAuth, checkUser,isLogin } = require('./middleware/authMiddleware')
+  const authRoute =require('./middleware/auth');
   const cors=require('cors');
   const app=express();
   const port=3000;
@@ -54,13 +55,15 @@ const dbURI = 'mongodb+srv://eli:Lvvf3gzFdKn8KuC@int2021.xduzl.mongodb.net/node-
   });
 });
 
-  //app.get( '*',checkUser);
+  app.get('*',authRoute);
   app.use('/',loginRoutes);
   app.use('/',signupRoutes);
   app.use('/anonymous/api',anonymousRoutes);
   app.use('/admin/api',adminRoutes); 
   app.use('/customers/api',customerRoutes);
   app.use('/airlines/api',airlineRoutes);
+  
+ // app.get( '*',checkUser);
 
 
 
