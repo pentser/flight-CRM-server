@@ -15,7 +15,7 @@ const mongoose = require('mongoose');
   const customerRoutes=require('./routes/customersRoutes');
 
   const cookieParser = require('cookie-parser');
-  const { requireAuth, checkUser } = require('./middleware/authMiddleware')
+  const { requireAuth, checkUser,isLogin } = require('./middleware/authMiddleware')
   const cors=require('cors');
   const app=express();
   const port=3000;

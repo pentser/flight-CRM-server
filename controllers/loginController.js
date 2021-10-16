@@ -45,7 +45,7 @@ login_get = async (req, res) => {
         if(action) {
          // result=await bl.login_get();
           //res.send(result);
-         req.send(req.url);
+         res.send(req.url);
   
         }     
       
@@ -71,7 +71,8 @@ read_cookies= async (req, res) => {
   //const cookies = req.cookies;
   console.log(req.url)
   console.log(req.cookies);
-  return res.json({ cookie1: req.cookies.token });
+  return res.json({ jwt: req.cookies.token,user: req.cookies.user });
+
 };
 
 read_header=async (req, res) => {

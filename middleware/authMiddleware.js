@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+//const User = require('../models/User');
 const config=require('config');
 
 
@@ -14,8 +14,33 @@ const requireAuth = (req, res, next) => {
         //res.redirect('/login'); // in ajax act differently
       } else {
           // we may here- check the user role ...
-        console.log(decodedToken);
-        next();
+          const url=req.url;
+          const user= req.cookies.user;
+          let flag=false;
+          console.log(decodedToken);
+          switch (user.rule) {
+            case "Customers":
+              if(url.indexOf('customers'))
+                 flag= true;
+              break;
+            case "Airlines":
+              if(url.indexOf('airlines'))
+                 flag= true;
+              break;
+            case "Admin":
+              if(url.indexOf('admin'))
+                flag= true;
+              break;
+            case "Anonymous":
+              if(url.indexOf('anonymous'))
+                  flag= true;
+              break;
+            default:  
+                flag= false;     
+          }
+        
+        if(flag)
+           next();
       }
     });
   } else {
@@ -23,8 +48,23 @@ const requireAuth = (req, res, next) => {
   }
 };
 
-// check current user
-const checkUser = (req, res, next) => {
+// isLogin
+const isLogin = (req, res, next) => {
+    const cookies = req.cookies.jwt;
+    if (cookeis)
+     {
+
+       console.log(true);
+       res.json(true)
+      
+    
+    } else {
+       console.log(false)
+      next();
+    }
+  };
+
+  const checkUser = (req, res, next) => {
     const token = req.cookies.jwt;
     if (token) {
       jwt.verify(token,config.get('privateKey'), async (err, decodedToken) => {
@@ -43,4 +83,4 @@ const checkUser = (req, res, next) => {
     }
   };
 
-  module.exports = { requireAuth, checkUser };
+  module.exports = { requireAuth, checkUser, isLogin };

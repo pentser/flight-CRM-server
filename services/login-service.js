@@ -19,20 +19,6 @@ const tryLogin = async (params)=> {
          // if password are equal
         if(user.password===params.password) {
 
-         /*    switch (user.rule) {
-                case "Customer":
-                     typeOfUser=await bl.getCustomerByUser(user);
-                    break;
-                case "Airline":
-                    typeOfUser=await bl.getAirlineByUser(user);
-                    break;
-                case "Admin":
-                    typeOfUser=await bl.getAdminByUser(user);
-                    break;
-                default:
-                    //anonymous typeOfUser={}            
-                    break;
-            } */
              
            userData=user;
            token=createToken(user.id);
