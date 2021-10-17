@@ -15,8 +15,8 @@ login_post = async (req,res) => {
         await trx_keeper(req.url,'login',paramsAr);
         let {userData,token}=await tryLogin(params);
          if(token) {
-          res.cookie('jwt', token, {httpOnly: true, SameSite:'Lax', maxAge: config.get('ttl')*1000 });
-          res.cookie('user',{username,email,rule}=userData,{path:'/',httpOnly: true,sameSite:'Lax', maxAge: config.get('ttl')*1000 });
+          res.cookie('jwt', token, {httpOnly: true, SameSite:'None', maxAge: config.get('ttl')*1000 });
+          res.cookie('user',{username,email,rule}=userData,{path:'/',httpOnly: true,sameSite:'None', maxAge: config.get('ttl')*1000 });
           res.status(200).json({ token,username,email,rule});
         
         }
@@ -59,7 +59,7 @@ read_cookies= async (req, res) => {
  
   console.log(req.url)
   console.log(req.cookies);
-  return res.json({ jwt: req.cookies.token,user: req.cookies.user });
+  return res.json({ cookies:req.cookies });
 
 
 };

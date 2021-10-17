@@ -2788,3 +2788,75 @@
   label: 'testing mode',
   timestamp: '2021-10-17T12:28:00.179Z'
 }
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-17T13:30:56.412Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-17T13:38:52.158Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-17T13:39:47.376Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-17T14:44:22.759Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-10-17T14:46:13.593Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-10-17T14:48:13.600Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-17T15:54:16.863Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-17T16:25:57.144Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-17T16:26:40.570Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-17T16:27:54.711Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-17T16:29:02.996Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-17T16:38:21.135Z'
+}
