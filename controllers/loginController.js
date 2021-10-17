@@ -16,9 +16,8 @@ login_post = async (req,res) => {
         let {userData,token}=await tryLogin(params);
          if(token) {
           
-          //res.cookie('elip',"randomNumber", { maxAge: 900000, httpOnly: true })
-          res.cookie('jwt', token, { httpOnly: true, maxAge: config.get('ttl')*1000 });
-          res.cookie('user',{username,email,rule}=userData,{ httpOnly: true, maxAge: config.get('ttl')*1000 });
+          res.cookie('jwt', token, { httpOnly: true, SameSite:'Lax', maxAge: config.get('ttl')*1000 });
+          res.cookie('user',{username,email,rule}=userData,{ httpOnly: true,sameSite:'Lax', maxAge: config.get('ttl')*1000 });
           res.status(200).json({ token,username,email,rule});
         
         }
@@ -32,33 +31,11 @@ login_post = async (req,res) => {
      console.log(e);
      logger.log({
       level: 'error',
-     message: `error  login_post:,${e}`
+     message: ` login_post:,${e}`
   });
     }
   }
 
-login_get = async (req, res) => {
-  
-    try {
-        
-        const paramsAr=[];
-        const action= await trx_keeper(req.url,'login_get', paramsAr);
-        if(action) {
-         // result=await bl.login_get();
-          //res.send(result);
-         res.send(req.url);
-  
-        }     
-      
-    }catch(e) {
-     console.log(e);
-     logger.log({
-      level: 'error',
-     message: `error  login_get:,${e}`
-  });
-    }
-    
-  }
 
 logout_get= async (req,res) =>{
 
@@ -104,7 +81,6 @@ read_header=async (req, res) => {
 
 module.exports={
     login_post,
-    login_get,
     logout_get,
     read_cookies,
     read_header,
