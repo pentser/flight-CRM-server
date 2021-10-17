@@ -7,24 +7,27 @@ const mongoose = require('mongoose');
   }); */
 
   const express=require('express');
+  const cookieParser = require('cookie-parser');
   const anonymousRoutes=require('./routes/anonymousRoutes');
   const adminRoutes=require('./routes/adminRoutes');
   const loginRoutes=require('./routes/loginRoutes');
   const signupRoutes=require('./routes/signupRoutes');
   const airlineRoutes=require('./routes/airlinesRoutes');
   const customerRoutes=require('./routes/customersRoutes');
+ 
 
-  const cookieParser = require('cookie-parser');
+  
   const { requireAuth, checkUser,isLogin } = require('./middleware/authMiddleware')
   const authRoute =require('./middleware/auth');
   const cors=require('cors');
   const app=express();
   const port=3000;
 
-
+  
   app.use(express.json());
   app.use(cookieParser());
   app.use(express.urlencoded({extended:true}));
+
   
   app.use(cors({
     origin:'*',
@@ -55,15 +58,22 @@ const dbURI = 'mongodb+srv://eli:Lvvf3gzFdKn8KuC@int2021.xduzl.mongodb.net/node-
   });
 });
 
+//app.get( '*',checkUser);
+
   app.get('*',authRoute);
   app.use('/',loginRoutes);
   app.use('/',signupRoutes);
-  app.use('/anonymous/api',anonymousRoutes);
+   app.use('/anonymous/api',anonymousRoutes);
   app.use('/admin/api',adminRoutes); 
   app.use('/customers/api',customerRoutes);
-  app.use('/airlines/api',airlineRoutes);
+  app.use('/airlines/api',airlineRoutes); 
+
+ 
+
+
+
   
- // app.get( '*',checkUser);
+
 
 
 

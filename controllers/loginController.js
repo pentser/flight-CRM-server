@@ -15,9 +15,8 @@ login_post = async (req,res) => {
         await trx_keeper(req.url,'login',paramsAr);
         let {userData,token}=await tryLogin(params);
          if(token) {
-          
-          res.cookie('jwt', token, { httpOnly: true, SameSite:'Lax', maxAge: config.get('ttl')*1000 });
-          res.cookie('user',{username,email,rule}=userData,{ httpOnly: true,sameSite:'Lax', maxAge: config.get('ttl')*1000 });
+          res.cookie('jwt', token, {httpOnly: true, SameSite:'Lax', maxAge: config.get('ttl')*1000 });
+          res.cookie('user',{username,email,rule}=userData,{path:'/',httpOnly: true,sameSite:'Lax', maxAge: config.get('ttl')*1000 });
           res.status(200).json({ token,username,email,rule});
         
         }
@@ -34,6 +33,17 @@ login_post = async (req,res) => {
      message: ` login_post:,${e}`
   });
     }
+  }
+
+login_get = async (req, res) => {
+   try{
+ 
+    res.json('login-get');
+   }
+   catch(e) {
+     console.log(e)
+   }
+  
   }
 
 
@@ -84,6 +94,7 @@ module.exports={
     logout_get,
     read_cookies,
     read_header,
+    login_get
   
 }
 

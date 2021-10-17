@@ -8,8 +8,8 @@ router.get('/',(req,res,next)=>{
            res.cookie('cokkieName',randomNumber, { maxAge: 900000, httpOnly: true })
 
            console.log('cookie have created successfully');
-           res.send('hello');
-           next()
+          // res.send('hello');
+           next();
 
 
 });
