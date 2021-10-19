@@ -37,7 +37,7 @@ login_post = async (req,res) => {
 
 login_get = async (req, res) => {
    try{
- 
+
     res.json('login-get');
    }
    catch(e) {
