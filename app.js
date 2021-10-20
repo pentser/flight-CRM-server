@@ -1,5 +1,7 @@
 const logger=require('./utils/logger');
 const mongoose = require('mongoose');
+var fs = require('fs')
+var https = require('https')
 
 /* logger.log({
     level: 'info',
@@ -30,8 +32,9 @@ const mongoose = require('mongoose');
 
   
   app.use(cors({
-    origin:'*',
-    credentials: 'include',
+    origin:'http://localhost:4200',
+    credentials: true,
+    withCredentials :true
   }))
 
   // database connection
@@ -41,15 +44,20 @@ const dbURI = 'mongodb+srv://eli:Lvvf3gzFdKn8KuC@int2021.xduzl.mongodb.net/node-
   mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
   .then((result) => {
     //console.log(result.connection) ;
-    app.listen(3000, () =>
+    
+    https.createServer({
+      key: fs.readFileSync('server.key'),
+      cert: fs.readFileSync('server.cert')
+    }, app)
+    .listen(3000, () =>
     {
-      console.log(`click on http://localhost:${port}`);
+      console.log(`click on https://localhost:${port}`);
        logger.log({
                     level: 'info',
                    message: `connected to host on port: ${port}`
-}); 
+       }); 
       
-    })
+  })
   })
   .catch((err) => {
     logger.log({
@@ -68,7 +76,6 @@ app.get('*',authRoute );
   app.use('/airlines/api',airlineRoutes); 
 
  
-
 
 
   

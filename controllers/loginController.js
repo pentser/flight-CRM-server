@@ -15,8 +15,9 @@ login_post = async (req,res) => {
         await trx_keeper(req.url,'login',paramsAr);
         let {userData,token}=await tryLogin(params);
          if(token) {
-          res.cookie('jwt', token, {httpOnly: true, SameSite:'None', maxAge: config.get('ttl')*1000 });
-          res.cookie('user',{username,email,rule}=userData,{path:'/',httpOnly: true,sameSite:'None', maxAge: config.get('ttl')*1000 });
+
+          res.cookie('jwt', token, {httpOnly: true, sameSite:'None',secure:true, maxAge: config.get('ttl')*1000 });
+          res.cookie('user',{username,email,rule}=userData,{httpOnly: true,sameSite:'None', secure:true,maxAge: config.get('ttl')*1000 });
           res.status(200).json({ token,username,email,rule});
         
         }
