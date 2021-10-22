@@ -58,8 +58,9 @@ const trySignup = async (params)=> {
     else {
         // create user
         const res=await bl.insertUser(params);
-        console.log(res);
         if(res) {
+            const res=await bl.getUserByUser(params);
+            const user=res.rows[0];
             token=createToken(user.id);
             userData=user;
         }

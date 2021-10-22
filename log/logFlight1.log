@@ -3262,3 +3262,363 @@
   label: 'testing mode',
   timestamp: '2021-10-20T10:12:14.910Z'
 }
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-20T10:29:37.352Z'
+}
+{
+  level: 'error',
+  message: "error connect to server:,Error: ENOENT: no such file or directory, open 'server.key'",
+  label: 'testing mode',
+  timestamp: '2021-10-20T12:33:44.182Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-20T12:35:18.932Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-21T03:17:35.652Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-21T09:47:59.757Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T11:00:01.106Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T13:31:57.585Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T13:32:26.452Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:33:23.972Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:40:02.145Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:40:33.350Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:40:37.870Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:42:43.254Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:43:17.563Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:44:10.417Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:46:35.566Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:46:45.991Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:46:53.032Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T14:54:05.113Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:08:31.362Z'
+}
+{
+  level: 'error',
+  message: "error  signup_post:,Error: TypeError: Cannot read property 'id' of undefined",
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:08:37.169Z'
+}
+{
+  level: 'error',
+  message: 'error  signup_post:,Error: Error: Error insertUser',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:08:51.159Z'
+}
+{
+  level: 'error',
+  message: 'error  signup_post:,Error: Error: Error insertUser',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:13:00.328Z'
+}
+{
+  level: 'error',
+  message: "error  signup_post:,Error: TypeError: Cannot read property 'id' of undefined",
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:13:06.856Z'
+}
+{
+  level: 'error',
+  message: 'error  signup_post:,Error: Error: Error insertUser',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:16:35.446Z'
+}
+{
+  level: 'error',
+  message: 'error  signup_post:,Error: Error: Error insertUser',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:20:02.622Z'
+}
+{
+  level: 'error',
+  message: "error  signup_post:,Error: TypeError: Cannot read property 'id' of undefined",
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:24:13.308Z'
+}
+{
+  level: 'error',
+  message: 'error  signup_post:,Error: Error: Error insertUser',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:24:47.443Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:28:43.933Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:31:51.307Z'
+}
+{
+  level: 'error',
+  message: "error  signup_post:,Error: TypeError: Cannot read property 'id' of undefined",
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:32:11.071Z'
+}
+{
+  level: 'error',
+  message: 'error  signup_post:,Error: Error: Error insertUser',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:32:23.126Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:34:21.336Z'
+}
+{
+  level: 'error',
+  message: "error  signup_post:,Error: TypeError: Cannot read property 'id' of undefined",
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:38:49.329Z'
+}
+{
+  level: 'error',
+  message: "error  signup_post:,Error: TypeError: Cannot read property 'id' of undefined",
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:40:23.098Z'
+}
+{
+  level: 'error',
+  message: "error  signup_post:,Error: TypeError: Cannot read property 'id' of undefined",
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:43:53.513Z'
+}
+{
+  level: 'error',
+  message: "error  signup_post:,Error: TypeError: Cannot read property 'id' of undefined",
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:50:26.515Z'
+}
+{
+  level: 'error',
+  message: 'error  signup_post:,Error: Error: Error insertUser',
+  label: 'testing mode',
+  timestamp: '2021-10-22T15:50:44.514Z'
+}
+{
+  level: 'error',
+  message: "error  signup_post:,Error: TypeError: Cannot read property 'id' of undefined",
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:22:21.788Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:23:23.661Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:23:29.042Z'
+}
+{
+  level: 'error',
+  message: 'error  signup_post:,ReferenceError: config is not defined',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:28:41.585Z'
+}
+{
+  level: 'error',
+  message: 'error  signup_post:,Error: Error: user exist',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:28:42.638Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:30:07.248Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:35:44.241Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:44:15.057Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:44:27.850Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:44:43.028Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:44:54.868Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:46:32.162Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:49:47.373Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T16:51:27.332Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T17:33:23.684Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T17:34:15.100Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T17:35:02.987Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T17:35:45.797Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T17:35:50.923Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T17:36:07.046Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T17:36:13.636Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-22T17:36:25.345Z'
+}

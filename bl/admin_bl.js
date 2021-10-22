@@ -3,9 +3,9 @@ const admin_deo=require('../admin_deo');
 
 
 const insertUser= async (params)=>{
-   const {user,password,email,rule}=params;
+   const {username,password,email,rule}=params;
    try{
-      const res=await admin_deo.insertUser(user,password,email,rule);
+      const res=await admin_deo.insertUser(username,password,email,rule);
       return res;
 
    }catch(e){
