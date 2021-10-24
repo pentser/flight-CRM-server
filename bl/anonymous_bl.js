@@ -25,10 +25,10 @@ const  getAllFlights=async ()=>{
     }
  }
 
- const  getArrivalFlights=async ()=>{
-
+ const  getArrivalFlights=async (params)=>{
+    const {id}=params
     try {
-     const res=await anonymous_deo.getArrivalFlights();
+     const res=await anonymous_deo.getArrivalFlights(id);
      return res.rows;
     }catch(e){
         console.log (e.message);
@@ -37,10 +37,10 @@ const  getAllFlights=async ()=>{
     }
  }
 
- const  getDepartureFlights=async ()=>{
-
+ const  getDepartureFlights=async (params)=>{
+    const {id}=params
     try {
-     const res=await anonymous_deo.getDepartureFlights();
+     const res=await anonymous_deo.getDepartureFlights(id);
      return res.rows;
     }catch(e){
         console.log (e.message);

@@ -56,10 +56,11 @@ get_all_countries = async (req, res) => {
     
     try {
         
-        const paramsAr=[];
+      params=req.query;
+      const paramsAr=Object.values(params)
         const action= await trx_keeper(req.url,'getArrivalFlights', paramsAr);
         if(action) {
-          result=await bl.getArrivalFlights();
+          result=await bl.getArrivalFlights(params);
           res.send(result);
 
         }
@@ -79,10 +80,11 @@ get_all_countries = async (req, res) => {
     
     try {
         
-        const paramsAr=[];
+        params=req.query;
+        const paramsAr=Object.values(params)
         const action= await trx_keeper(req.url,'getDepartureFlights', paramsAr);
         if(action) {
-          result=await bl.getDepartureFlights();
+          result=await bl.getDepartureFlights(params);
           res.send(result);
 
         }
