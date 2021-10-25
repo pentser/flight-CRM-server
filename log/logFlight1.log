@@ -3694,3 +3694,21 @@
   label: 'testing mode',
   timestamp: '2021-10-24T10:50:26.501Z'
 }
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-25T16:42:35.914Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-25T16:53:01.683Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-10-25T18:31:52.869Z'
+}
