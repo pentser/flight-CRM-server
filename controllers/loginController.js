@@ -50,9 +50,11 @@ login_get = async (req, res) => {
 
 logout_get= async (req,res) =>{
 
-  res.cookie('jwt', '', { maxAge: 1 });
-  res.cookie('user', '', { maxAge: 1 });
-  res.redirect('/');
+  
+  res.cookie('jwt', '', { maxAge: 1,httpOnly: true, sameSite:'None',secure:true });
+  res.cookie('user', '', { maxAge: 1,httpOnly: true, sameSite:'None',secure:true }); 
+
+  res.status(200).json({complate:'Done'});
 
 }
 
