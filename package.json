@@ -9,7 +9,7 @@
     "test:admin": "mocha admin_test"
   },
   "keywords": [],
-  "author": "",
+  "author": "eli pentser",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
