@@ -7,6 +7,63 @@ const logger=require('../utils/logger');
 
 // controller actions
 
+insert_country = async (req, res) => {
+    
+  try {
+      params=req.body;
+      const paramsAr=Object.values(params)
+      await trx_keeper(req.url,'insertCountry',paramsAr);
+      result=await bl.insertCountry(params);
+      res.send(result);
+    
+  }catch(e) {
+   console.log(e);
+   logger.log({
+    level: 'error',
+   message: `error  insert_country:,${e}`
+});
+  }
+  
+}
+
+update_country = async (req, res) => {
+  
+  try {
+      params=req.body;
+      const paramsAr=Object.values(params)
+      await trx_keeper(req.url,'updateCountry',paramsAr);
+      result=await bl.updateCountry(params);
+      res.send(result);
+    
+  }catch(e) {
+   console.log(e);
+   logger.log({
+    level: 'error',
+   message: `error  update_country:,${e}`
+});
+  }
+  
+}
+
+delete_country = async (req, res) => {
+  
+  try {
+      params=req.body;
+      const paramsAr=Object.values(params)
+      await trx_keeper(req.url,'deleteCountry',paramsAr);
+      result=await bl.deleteCountry(params);
+      res.send(result);
+    
+  }catch(e) {
+   console.log(e);
+   logger.log({
+    level: 'error',
+   message: `error  delete_country:,${e}`
+});
+  }
+  
+}
+
   
   insert_airline = async (req, res) => {
     
@@ -303,6 +360,10 @@ const logger=require('../utils/logger');
   
 
   module.exports={
+
+    insert_country,
+    update_country,
+    delete_country,
 
     insert_user,
     update_user,

@@ -1,6 +1,48 @@
 
 const admin_deo=require('../admin_deo');
 
+const insertCountry= async (params)=>{
+   const {name}=params;
+   try{
+      const res=await admin_deo.insertCountry(name);
+      return res;
+
+   }catch(e){
+      console.log (e.message);
+      return new Error(e.message);
+   }
+
+
+}
+
+const updateCountry= async (params)=>{
+  const {id,name}=params;
+  try{
+     const res=await admin_deo.updateCountry(id,name);
+     return res;
+
+  }catch(e){
+     console.log (e.message);
+     return new Error('country not exist');
+  }
+
+
+}
+
+const deleteCountry=async (params)=>{
+  const {id}=params
+  try{
+      const res=await admin_deo.deleteUser(id);
+      return res;
+
+   }catch(e){
+      console.log (e.message);
+      return new Error('country not exist');
+
+   }
+
+}
+
 
 const insertUser= async (params)=>{
    const {username,password,email,rule}=params;
@@ -162,6 +204,10 @@ module.exports={
     insertUser,
     updateUser,
     deleteUser,
+
+    insertCountry,
+    updateCountry,
+    deleteCountry,
 
     getAllUsers,
     getAllTickets,

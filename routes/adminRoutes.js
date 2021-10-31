@@ -5,6 +5,10 @@ const clientActionController=require('../controllers/clientActionController')
 const router = Router();
 
 
+router.post('/insert_country',adminController.insert_country);
+router.put('/update_country',adminController.update_country);
+router.delete('/delete_country',adminController.delete_country);
+
 router.post('/insert_airline',adminController.insert_airline);
 router.put('/update_airline',adminController.update_airline);
 router.delete('/delete_airline',adminController.delete_airline);
