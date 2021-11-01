@@ -14,7 +14,10 @@ const logger=require('../utils/logger');
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'updateairline',paramsAr);
         result=await bl.updateAirline(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e)
@@ -29,7 +32,10 @@ const logger=require('../utils/logger');
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'insertFlight',paramsAr);
         result=await bl.insertFlight(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -48,7 +54,10 @@ const logger=require('../utils/logger');
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'updateFlight',paramsAr);
         result=await bl.updateFlight(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -67,7 +76,10 @@ const logger=require('../utils/logger');
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'deleteFlight',paramsAr);
         result=await bl.deleteFlight(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -86,7 +98,10 @@ const logger=require('../utils/logger');
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'getAirlineByUser',paramsAr);
         result=await bl.getAirlineByUser(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);

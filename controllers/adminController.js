@@ -14,7 +14,10 @@ insert_country = async (req, res) => {
       const paramsAr=Object.values(params)
       await trx_keeper(req.url,'insertCountry',paramsAr);
       result=await bl.insertCountry(params);
-      res.send(result);
+      if(result instanceof Error) {  
+        res.status(500).json(result.message)
+     }
+      res.status(200).json(result.message);
     
   }catch(e) {
    console.log(e);
@@ -33,7 +36,10 @@ update_country = async (req, res) => {
       const paramsAr=Object.values(params)
       await trx_keeper(req.url,'updateCountry',paramsAr);
       result=await bl.updateCountry(params);
-      res.send(result);
+      if(result instanceof Error) {  
+        res.status(500).json(result.message)
+     }
+      res.status(200).json(result.message);
     
   }catch(e) {
    console.log(e);
@@ -56,7 +62,7 @@ delete_country = async (req, res) => {
       if(result instanceof Error) {  
          res.status(500).json(result.message)
       }
-       res.status(200).json(result.message)
+       res.status(200).json(result);
     
   }catch(e) {
    logger.log({
@@ -75,7 +81,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'insertAirline',paramsAr);
         result=await bl.insertAirline(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -94,7 +103,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'updateAirline',paramsAr);
         result=await bl.updateAirline(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -113,7 +125,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'deleteAirline',paramsAr);
         result=await bl.deleteAirline(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -132,7 +147,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'insertUser',paramsAr);
         result=await bl.insertUser(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -151,7 +169,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'updateUser',paramsAr);
         result=await bl.updateUser(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -170,7 +191,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'deleteUser',paramsAr);
         result=await bl.deleteUser(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e)
@@ -185,7 +209,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'insertCustomer',paramsAr);
         result=await bl.insertCustomer(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -204,7 +231,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'updateCustomer',paramsAr);
         result=await bl.updateCustomer(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -223,7 +253,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'deleteCustomer',paramsAr);
         result=await bl.deleteCustomer(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -243,7 +276,10 @@ delete_country = async (req, res) => {
         const action= await trx_keeper(req.url,'getAllUsers', paramsAr);
         if(action) {
           result=await bl.getAllUsers();
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -266,7 +302,10 @@ delete_country = async (req, res) => {
         const action= await trx_keeper(req.url,'getAllCustomers', paramsAr);
         if(action) {
           result=await bl.getAllCustomers();
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -285,7 +324,10 @@ delete_country = async (req, res) => {
         const action= await trx_keeper(req.url,'getAllTickets', paramsAr);
         if(action) {
           result=await bl.getAllTickets();
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -307,7 +349,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'getUserById',paramsAr);
         result=await bl.getUserById(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -327,7 +372,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'getAdminByUser',paramsAr);
         result=await bl.getAdminByUser(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -346,7 +394,10 @@ delete_country = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'getUserByUser',paramsAr);
         result=await bl.getUserByUser(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);

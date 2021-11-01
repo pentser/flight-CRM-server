@@ -15,7 +15,10 @@ get_customer_by_id = async (req, res) => {
         const action= await trx_keeper(req.url,'getCustomerById', paramsAr);
         if(action) {
           result=await bl.getCustomerById(params);
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -39,7 +42,10 @@ get_customer_by_id = async (req, res) => {
         const action= await trx_keeper(req.url,'getCountryById', paramsAr);
         if(action) {
           result=await bl.getCountryById(params);
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -64,7 +70,10 @@ get_customer_by_id = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'getTicketByCustomer',paramsAr);
         result=await bl.getTicketByCustomer(params)
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -85,7 +94,10 @@ get_customer_by_id = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'updateCustomer',paramsAr);
         result=await bl.updateCustomer(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -104,7 +116,10 @@ get_customer_by_id = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'insertTicket',paramsAr);
         result=await bl.insertTiket(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -123,7 +138,10 @@ get_customer_by_id = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'updateTicket',paramsAr);
         result=await bl.updateTicket(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -142,7 +160,10 @@ get_customer_by_id = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'deleteTicket',paramsAr);
         result=await bl.deleteTicket(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);
@@ -162,7 +183,10 @@ get_customer_by_id = async (req, res) => {
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'getCustomerByUser',paramsAr);
         result=await bl.getCustomerByUser(params);
-        res.send(result);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
       
     }catch(e) {
      console.log(e);

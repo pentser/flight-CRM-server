@@ -14,7 +14,10 @@ get_all_countries = async (req, res) => {
         const action= await trx_keeper(req.url,'getAllCountries', paramsAr);
         if(action) {
           result=await bl.getAllCountries();
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -37,7 +40,10 @@ get_all_countries = async (req, res) => {
         const action= await trx_keeper(req.url,'getAllCountries', paramsAr);
         if(action) {
           result=await bl.getAllFlights();
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -61,7 +67,10 @@ get_all_countries = async (req, res) => {
         const action= await trx_keeper(req.url,'getArrivalFlights', paramsAr);
         if(action) {
           result=await bl.getArrivalFlights(params);
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -85,7 +94,10 @@ get_all_countries = async (req, res) => {
         const action= await trx_keeper(req.url,'getDepartureFlights', paramsAr);
         if(action) {
           result=await bl.getDepartureFlights(params);
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -108,7 +120,10 @@ get_all_countries = async (req, res) => {
         const action= await trx_keeper(req.url,'getAllAirlinesJoin', paramsAr);
         if(action) {
           result=await bl.getAllAirlinesJoin();
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -132,7 +147,10 @@ get_all_countries = async (req, res) => {
         const action= await trx_keeper(req.url,'getFlightById', paramsAr);
         if(action) {
           result=await bl.getFlightById(params);
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -156,7 +174,10 @@ get_all_countries = async (req, res) => {
         const action= await trx_keeper(req.url,'getAirlineById', paramsAr);
         if(action) {
           result=await bl.getAirlineById(params);
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -180,7 +201,10 @@ get_all_countries = async (req, res) => {
         const action= await trx_keeper(req.url,'getFlightByAirlineId', paramsAr);
         if(action) {
           result=await bl.getFlightByAirlineId(params);
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -205,7 +229,10 @@ get_all_countries = async (req, res) => {
         const action= await trx_keeper(req.url,'getFlightsByParameters', paramsAr);
         if(action) {
           result=await bl.getFlightByParameters(params);
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
@@ -229,7 +256,10 @@ get_all_countries = async (req, res) => {
         const action= await trx_keeper(req.url,'checkUsernameAvailability', paramsAr);
         if(action) {
           result=await bl.checkUsernameAvailability(params);
-          res.send(result);
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
 
         }
       
