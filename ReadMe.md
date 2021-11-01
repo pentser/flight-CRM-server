@@ -18,6 +18,6 @@
 
   - Using Winston logger for create log messages (save to file: folder log/logFlight1.log).
 
-
-
-
+   # db_generator
+    - client tool to generate data on local postgresql database
+    - see changelog file inside the folder
