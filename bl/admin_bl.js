@@ -37,7 +37,7 @@ const deleteCountry=async (params)=>{
 
    }catch(e){
       console.log (e.message);
-      return new Error('country not exist');
+      return new Error(e.message);
 
    }
 

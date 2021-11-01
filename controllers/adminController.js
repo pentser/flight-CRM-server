@@ -52,10 +52,13 @@ delete_country = async (req, res) => {
       const paramsAr=Object.values(params)
       await trx_keeper(req.url,'deleteCountry',paramsAr);
       result=await bl.deleteCountry(params);
-      res.send(result);
+      
+      if(result instanceof Error) {  
+         res.status(500).json(result.message)
+      }
+       res.status(200).json(result.message)
     
   }catch(e) {
-   console.log(e);
    logger.log({
     level: 'error',
    message: `error  delete_country:,${e}`

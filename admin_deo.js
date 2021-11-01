@@ -98,7 +98,7 @@ const deleteUser=async (_id) => {
     return result.rows[0].sp_delete_user;
 
     } catch(e) {
-        console.log(e.message);
+        throw e
     }
 
 }
