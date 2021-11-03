@@ -5368,3 +5368,99 @@
   label: 'testing mode',
   timestamp: '2021-11-03T07:55:30.461Z'
 }
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-03T08:15:56.592Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-03T08:18:21.682Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-03T08:26:21.796Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-03T09:30:56.632Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-03T10:27:07.642Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-03T10:43:44.534Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-03T10:52:11.806Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-11-03T11:21:09.183Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-11-03T11:21:32.710Z'
+}
+{
+  level: 'error',
+  message: `error  update_country:,ValidationError: params.0: Cast to [string] failed for value "[\\n  { normalizedNames: {}, lazyUpdate: null },\\n  { id: 1, name: 'israel' }\\n]" (type string) at path "params.0"`,
+  label: 'testing mode',
+  timestamp: '2021-11-03T12:34:37.610Z'
+}
+{
+  level: 'error',
+  message: `error  update_country:,ValidationError: params.0: Cast to [string] failed for value "[\\n  { normalizedNames: {}, lazyUpdate: null },\\n  { id: 1, name: 'israel' }\\n]" (type string) at path "params.0"`,
+  label: 'testing mode',
+  timestamp: '2021-11-03T12:34:59.355Z'
+}
+{
+  level: 'error',
+  message: `error  update_country:,ValidationError: params.0: Cast to [string] failed for value "[\\n  { normalizedNames: {}, lazyUpdate: null },\\n  { id: 1, name: 'israel' }\\n]" (type string) at path "params.0"`,
+  label: 'testing mode',
+  timestamp: '2021-11-03T12:36:37.606Z'
+}
+{
+  level: 'error',
+  message: `error  update_country:,ValidationError: params.0: Cast to [string] failed for value "[\\n  { normalizedNames: {}, lazyUpdate: null },\\n  { id: 1, name: 'israel' }\\n]" (type string) at path "params.0"`,
+  label: 'testing mode',
+  timestamp: '2021-11-03T12:36:59.359Z'
+}
+{
+  level: 'error',
+  message: 'error  delete_country:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-03T12:46:59.252Z'
+}
+{
+  level: 'error',
+  message: 'error  delete_country:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-03T12:48:27.603Z'
+}
+{
+  level: 'error',
+  message: 'error  delete_country:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-03T12:48:40.268Z'
+}
