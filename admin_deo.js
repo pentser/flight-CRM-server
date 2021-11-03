@@ -233,7 +233,7 @@ const getAllUsers=async () => {
    
     try{
 
-        const result=await rawRepo.getRowResult(`select * from sp_get_user_by_id(${_id})`);
+        const result=await rawRepo.getRowResult(`select * from sp_get_user_by_id('${_id}')`);
         return result;
     } catch(e){
         console.log(e.message);
@@ -246,7 +246,7 @@ const getAdminByUser=async (_user) => {
    
     try{
 
-        const result=await rawRepo.getRowResult(`select * from sp_get_user_by_user(${_user})`);
+        const result=await rawRepo.getRowResult(`select * from sp_get_user_by_user('${_user}')`);
         return result;
     } catch(e){
         console.log(e.message);

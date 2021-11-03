@@ -33,7 +33,7 @@ const getArrivalFlights=async (_id) => {
    
     try{
 
-        const result=await rawRepo.getRowResult(`select * from get_arrival_flights (${_id})`);
+        const result=await rawRepo.getRowResult(`select * from get_arrival_flights ('${_id}')`);
         return result;
     } catch(e){
         console.log(e.message);
@@ -46,7 +46,7 @@ const getDepartureFlights=async (_id) => {
    
     try{
 
-        const result=await rawRepo.getRowResult(`select * from get_departure_flights( (${_id})`);
+        const result=await rawRepo.getRowResult(`select * from get_departure_flights ('${_id}')`);
         return result;
     } catch(e){
         console.log(e.message);
@@ -96,7 +96,7 @@ const getFlightById=async (_id) => {
    
     try{
 
-        const result=await rawRepo.getRowResult(`select * from sp_get_flight_by_id(${_id})`);
+        const result=await rawRepo.getRowResult(`select * from sp_get_flight_by_id('${_id}')`);
         return result;
     } catch(e){
         console.log(e.message);
@@ -109,7 +109,7 @@ const getFlightByAirlineId=async (_id) => {
    
     try{
 
-        const result=await rawRepo.getRowResult(`select * from get_flight_by_airline_id(${_id})`);
+        const result=await rawRepo.getRowResult(`select * from get_flight_by_airline_id('${_id}')`);
         return result;
     } catch(e){
         console.log(e.message);
@@ -122,7 +122,7 @@ const getFlightByParameters=async (_origin_country_id,_destination_country_id,_d
    
     try{
 
-        const result=await rawRepo.getRowResult(`select * from get_flights_by_parameters(${_origin_country_id,_destination_country_id,_date})`);
+        const result=await rawRepo.getRowResult(`select * from get_flights_by_parameters('${_origin_country_id}','${_destination_country_id}','${_date}')`);
         return result;
     } catch(e){
         console.log(e.message);
@@ -134,7 +134,7 @@ const getFlightByParameters=async (_origin_country_id,_destination_country_id,_d
 const checkUsernameAvailability=async (email) => {
     try{
 
-        const result=await rawRepo.getRowResult(`select * from get_user_by_email(${email})`);
+        const result=await rawRepo.getRowResult(`select * from get_user_by_email('${email}')`);
         return result;
     } catch(e){
         console.log(e.message);
