@@ -5464,3 +5464,249 @@
   label: 'testing mode',
   timestamp: '2021-11-03T12:48:40.268Z'
 }
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-03T17:58:36.339Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T13:44:01.825Z'
+}
+{
+  level: 'error',
+  message: 'error  delete_country:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-04T13:47:24.033Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:18:36.733Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:18:59.593Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:19:12.385Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:21:08.542Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:21:22.059Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:21:54.167Z'
+}
+{
+  level: 'error',
+  message: `error  update_country:,ValidationError: params.0: Cast to [string] failed for value "[\\n  { normalizedNames: {}, lazyUpdate: null },\\n  { id: 1, name: 'israel' }\\n]" (type string) at path "params.0"`,
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:22:18.974Z'
+}
+{
+  level: 'error',
+  message: `error  update_country:,ValidationError: params.0: Cast to [string] failed for value "[\\n  { normalizedNames: {}, lazyUpdate: null },\\n  { id: 1, name: 'israel' }\\n]" (type string) at path "params.0"`,
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:24:18.981Z'
+}
+{
+  level: 'error',
+  message: 'error connect to server:,Error: querySrv ETIMEOUT _mongodb._tcp.int2021.xduzl.mongodb.net',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:26:11.066Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:27:09.336Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:27:26.710Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:27:36.980Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:27:37.999Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:28:22.482Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:28:35.446Z'
+}
+{
+  level: 'error',
+  message: `error  update_country:,ValidationError: params.0: Cast to [string] failed for value "[\\n  { normalizedNames: {}, lazyUpdate: null },\\n  { id: 1, name: 'israel' }\\n]" (type string) at path "params.0"`,
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:30:48.150Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:31:14.264Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-04T14:37:39.193Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T17:27:27.676Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T17:27:29.779Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T17:27:45.473Z'
+}
+{
+  level: 'error',
+  message: 'error  delete_country:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-04T17:38:13.991Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T17:38:26.878Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T17:41:47.774Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T17:42:19.366Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T18:44:03.562Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:36:18.141Z'
+}
+{
+  level: 'error',
+  message: 'error  delete_country:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:38:34.843Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:39:05.782Z'
+}
+{
+  level: 'error',
+  message: 'error  delete_country:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:40:11.388Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:41:07.244Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:41:09.690Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:42:52.341Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:43:36.639Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:46:16.484Z'
+}
+{
+  level: 'error',
+  message: 'error  update_country:,TypeError: Cannot convert undefined or null to object',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:46:43.837Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:47:01.486Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-04T19:47:47.768Z'
+}
