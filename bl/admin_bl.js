@@ -32,7 +32,7 @@ const updateCountry= async (params)=>{
 const deleteCountry=async (params)=>{
   const {id}=params
   try{
-      const res=await admin_deo.deleteUser(id);
+      const res=await admin_deo.deleteCountry(id);
       return res;
 
    }catch(e){
