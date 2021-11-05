@@ -17,7 +17,7 @@ insert_country = async (req, res) => {
       if(result instanceof Error) {  
         res.status(500).json(result.message)
      }
-      res.status(200).json(result.message);
+      res.status(200).json(result);
     
   }catch(e) {
    console.log(e);
