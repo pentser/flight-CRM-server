@@ -1,6 +1,48 @@
 
 const admin_deo=require('../admin_deo');
 
+const insertAirline= async (params)=>{
+   const {name}=params;
+   try{
+      const res=await admin_deo.insertAirline(name);
+      return res;
+
+   }catch(e){
+      console.log (e.message);
+      return new Error(e.message);
+   }
+
+
+}
+
+const updateAirline= async (params)=>{
+  const {id,name}=params;
+  try{
+     const res=await admin_deo.updateAirline(id,name);
+     return res;
+
+  }catch(e){
+     console.log (e.message);
+     return new Error('Airline not exist');
+  }
+
+
+}
+
+const deleteAirline=async (params)=>{
+  const {id}=params
+  try{
+      const res=await admin_deo.deleteAirline(id);
+      return res;
+
+   }catch(e){
+      console.log (e.message);
+      return new Error(e.message);
+
+   }
+
+}
+
 const insertCountry= async (params)=>{
    const {name}=params;
    try{
@@ -204,6 +246,10 @@ module.exports={
     insertUser,
     updateUser,
     deleteUser,
+
+    insertAirline,
+    updateAirline,
+    deleteAirline,
 
     insertCountry,
     updateCountry,

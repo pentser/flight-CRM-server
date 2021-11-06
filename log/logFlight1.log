@@ -5782,3 +5782,27 @@
   label: 'testing mode',
   timestamp: '2021-11-05T16:22:31.986Z'
 }
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-05T16:22:49.751Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-05T20:23:25.599Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-05T20:28:10.770Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-06T07:34:10.445Z'
+}
