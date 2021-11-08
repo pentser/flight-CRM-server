@@ -5806,3 +5806,759 @@
   label: 'testing mode',
   timestamp: '2021-11-06T07:34:10.445Z'
 }
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-07T11:51:59.257Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-07T11:56:16.630Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:31:46.075Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:35:32.689Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:35:53.279Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:36:08.041Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:36:55.535Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:37:09.479Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:37:12.948Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:37:28.369Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:37:46.520Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:38:26.424Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:38:51.073Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:39:03.398Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:39:09.409Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:40:25.110Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:40:37.926Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:40:42.950Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:40:50.278Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:40:59.095Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:41:03.873Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:41:18.094Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:41:30.134Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:41:45.146Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:41:54.648Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:44:02.340Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:44:17.296Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:44:23.119Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:44:26.451Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:45:19.252Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:45:25.123Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:45:33.020Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:47:24.809Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:47:27.924Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:47:55.993Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:48:21.249Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:48:39.781Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:48:50.984Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:49:02.148Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:49:11.670Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:49:32.243Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:49:41.143Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:49:54.803Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:50:49.165Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:53:56.845Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:54:18.815Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:54:25.186Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:54:30.913Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:55:04.929Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:57:12.770Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:58:05.578Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T07:58:11.650Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T08:01:09.814Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T08:01:26.262Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T08:01:40.751Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T08:01:46.994Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T08:02:43.474Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T08:02:55.706Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T08:03:59.691Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T08:19:47.103Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T08:52:42.624Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:09:08.684Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:09:23.640Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:09:27.652Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:09:30.974Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:10:08.647Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:10:58.282Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:11:14.266Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:11:35.360Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:11:47.985Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:11:55.404Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:12:15.284Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:12:24.386Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:14:10.619Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:14:17.401Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:14:21.241Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:14:26.562Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:14:40.162Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:14:56.123Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:15:20.636Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:15:25.737Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:15:49.306Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:15:59.472Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:16:02.456Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:16:28.369Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:16:33.735Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:16:39.657Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:16:54.356Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:17:01.580Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:17:06.812Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:17:16.398Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:18:09.444Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:18:12.487Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:18:28.636Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:18:37.237Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:18:56.729Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:19:35.434Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T09:19:45.970Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:01:41.289Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:01:49.398Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:02:56.696Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:03:20.844Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:04:22.486Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:04:36.891Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:05:15.891Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:06:59.123Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:07:05.298Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:07:20.918Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:08:23.918Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:10:24.748Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:11:37.849Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:11:52.812Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:11:56.180Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:12:19.466Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:12:54.800Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:23:27.097Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:24:04.840Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:24:09.041Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:24:16.222Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:24:35.715Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:24:44.112Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:24:58.339Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:25:01.266Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:26:26.945Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:39:11.143Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-08T10:41:22.629Z'
+}

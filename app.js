@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 var fs = require('fs')
 var https = require('https')
 
+const utils=require('./utils_flight_now')
+
 /* logger.log({
     level: 'info',
     message: 'open flightCRM application'
@@ -51,6 +53,10 @@ const dbURI = 'mongodb+srv://eli:Lvvf3gzFdKn8KuC@int2021.xduzl.mongodb.net/node-
     }, app)
     .listen(3000, () =>
     {
+      
+      // for chacking search page flights.
+      utils.insert24hourNowFlights();
+
       console.log(`click on https://localhost:${port}`);
        logger.log({
                     level: 'info',
