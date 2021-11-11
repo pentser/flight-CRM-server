@@ -45,6 +45,7 @@ router.get('/get_admin_by_user', adminController.get_admin_by_user);
 router.get('/get_all_users', adminController.get_all_users);
 router.get('/get_all_customers', adminController.get_all_customers);
 router.get('/get_all_tickets', adminController.get_all_tickets);
+router.get('/get_all_tickets_join', adminController.get_all_tickets_join);
 
 
 router.get('/get_all_trasactions',clientActionController.get_all_transactions);

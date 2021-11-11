@@ -342,6 +342,32 @@ delete_country = async (req, res) => {
     
   }
 
+  get_all_tickets_join = async (req, res) => {
+    
+    try {
+        
+        const paramsAr=[];
+        const action= await trx_keeper(req.url,'getAllTicketsJoin', paramsAr);
+        if(action) {
+          result=await bl.getAllTicketsJoin();
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
+
+        }
+      
+      
+    }catch(e) {
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_all_tickets_join:,${e}`
+  });
+    }
+    
+  }
+
   get_user_by_id = async (req, res) => {
     
     try {
@@ -434,6 +460,7 @@ delete_country = async (req, res) => {
     get_all_users,
     get_all_customers,
     get_all_tickets,
+    get_all_tickets_join,
     get_user_by_id,
     get_admin_by_user,
     get_user_by_user

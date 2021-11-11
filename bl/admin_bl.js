@@ -154,6 +154,18 @@ const  getAllTickets=async ()=>{
    }
 }
 
+const  getAllTicketsJoin=async ()=>{
+
+   try {
+    const res=await admin_deo.getAllTicketsJoin();
+    return res.rows;
+   }catch(e){
+       console.log (e.message);
+       return new Error(e.message);
+
+   }
+}
+
 const  getAllCustomers=async ()=>{
 
    try {
@@ -257,6 +269,7 @@ module.exports={
 
     getAllUsers,
     getAllTickets,
+    getAllTicketsJoin,
     getAllCustomers,
     getUserById,
     getUserByUser,

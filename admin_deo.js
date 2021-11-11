@@ -229,6 +229,16 @@ const getAllUsers=async () => {
     }
  }
 
+ const getAllTicketsJoin=async () => {
+    try {
+     const result=await rawRepo.getRowResult(`select * from sp_get_all_tickets_join()`);
+     return result;
+    } catch(e)
+    {
+        console.log(e.message)
+    }
+ }
+
  const getUserById=async (_id) => {
    
     try{
@@ -323,6 +333,7 @@ module.exports={
 
     getAllUsers,
     getAllTickets,
+    getAllTicketsJoin,
     getAllCustomers,
     getUserById,
     getUserByUser,
