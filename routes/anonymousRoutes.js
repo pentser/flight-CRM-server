@@ -6,6 +6,7 @@ const router = Router();
 
 router.get('/get_all_countries', anonymousController.get_all_countries);
 router.get('/get_all_flights', anonymousController.get_all_flights);
+router.get('/get_all_flights_join', anonymousController.get_all_flights_join);
 router.get('/get_arrival_flights', anonymousController.get_arrival_flights);
 router.get('/get_departure_flights', anonymousController.get_departure_flights);
 /**

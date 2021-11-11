@@ -25,6 +25,18 @@ const  getAllFlights=async ()=>{
     }
  }
 
+ const  getAllFlightsJoin=async ()=>{
+
+    try {
+     const res=await anonymous_deo.getAllFlightsJoin();
+     return res.rows;
+    }catch(e){
+        console.log (e.message);
+        return new Error(e.message);
+ 
+    }
+ }
+
  const  getArrivalFlights=async (params)=>{
     const {id}=params
     try {
@@ -126,6 +138,7 @@ const checkUsernameAvailability=  async (params)=>{
 module.exports={
     getAllCountries,
     getAllFlights,
+    getAllFlightsJoin,
     getArrivalFlights,
     getDepartureFlights,
     getAllAirlinesJoin,

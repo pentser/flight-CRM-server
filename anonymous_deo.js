@@ -14,6 +14,16 @@ const getAllFlights=async () => {
    }
 }
 
+const getAllFlightsJoin=async () => {
+    try {
+     const result=await rawRepo.getRowResult(`select * from sp_get_all_flights_join()`);
+     return result;
+    } catch(e)
+    {
+        console.log(e.message)
+    }
+ }
+
 
 
 const getAllCountries=async () => {
@@ -148,6 +158,7 @@ const checkUsernameAvailability=async (email) => {
 
 module.exports={
     getAllFlights,
+    getAllFlightsJoin,
     getAllCountries,
     getArrivalFlights,
     getDepartureFlights,

@@ -16,7 +16,7 @@ const insert24hourNowFlights=async () => {
   port: 5432,
 });
 
-  for (let x=0;x<2;x++) {
+  for (let x=0,t=447;x<2;x++,t--) {
 
  let res=generator();
  let departure_time=res.departure_time;
@@ -24,7 +24,7 @@ const insert24hourNowFlights=async () => {
   let airline_id=1;
   let origin_country_id=Math.floor(Math.random()*2) +1;
   let destination_country_id=origin_country_id==2?1:2;
-  let remaining_tickets=449;
+  let remaining_tickets=t;
 
 
 

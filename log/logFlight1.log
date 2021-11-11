@@ -6562,3 +6562,315 @@
   label: 'testing mode',
   timestamp: '2021-11-08T10:41:22.629Z'
 }
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-09T05:13:29.155Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-11-09T05:15:21.554Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-11-09T05:16:10.986Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-11-09T05:16:12.798Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-11-09T05:16:18.066Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-11-09T05:16:19.643Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-11-09T05:16:49.220Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-11-09T05:19:04.431Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-09T05:20:15.554Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-09T10:22:23.684Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-09T21:35:50.015Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T05:34:06.675Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T08:36:53.369Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T09:15:39.226Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T11:25:08.427Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T16:10:25.195Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T17:47:05.444Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T17:47:10.146Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T17:48:02.232Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T17:48:34.618Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T17:50:22.012Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T17:50:42.888Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T17:50:50.538Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T17:51:12.235Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T17:52:00.904Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T17:55:27.286Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T18:17:05.566Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T18:17:24.261Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-10T18:21:42.582Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-11T06:50:57.381Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:00:41.525Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:01:14.175Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:01:16.233Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:01:25.152Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:01:29.714Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:01:35.785Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:04:03.898Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:04:05.687Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:04:07.830Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:04:13.642Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:04:31.151Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:04:52.338Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:04:58.440Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:07:01.392Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:07:11.591Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:10:11.751Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:11:15.999Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:16:29.403Z'
+}
+{
+  level: 'error',
+  message: 'error  get_all_flights_join:,TypeError: bl.get_all_flights_join is not a function',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:17:09.495Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:23:03.347Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:29:08.680Z'
+}
+{
+  level: 'error',
+  message: ' login_post:,Error: Error: incorrect user',
+  label: 'testing mode',
+  timestamp: '2021-11-11T07:34:18.945Z'
+}

@@ -37,7 +37,7 @@ get_all_countries = async (req, res) => {
     try {
         
         const paramsAr=[];
-        const action= await trx_keeper(req.url,'getAllCountries', paramsAr);
+        const action= await trx_keeper(req.url,'getAllflights', paramsAr);
         if(action) {
           result=await bl.getAllFlights();
           if(result instanceof Error) {  
@@ -53,6 +53,33 @@ get_all_countries = async (req, res) => {
      logger.log({
       level: 'error',
      message: `error  get_all_flights:,${e}`
+  });
+    }
+    
+  }
+
+  
+  get_all_flights_join = async (req, res) => {
+    
+    try {
+        
+        const paramsAr=[];
+        const action= await trx_keeper(req.url,'getAllFlightsJoin', paramsAr);
+        if(action) {
+          result=await bl.getAllFlightsJoin();
+          if(result instanceof Error) {  
+            res.status(500).json(result.message)
+         }
+          res.status(200).json(result);
+
+        }
+      
+      
+    }catch(e) {
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  get_all_flights_join:,${e}`
   });
     }
     
@@ -280,6 +307,7 @@ get_all_countries = async (req, res) => {
 module.exports={
     get_all_countries,
     get_all_flights,
+    get_all_flights_join,
     get_arrival_flights,
     get_departure_flights,
     get_all_airlines_join,
