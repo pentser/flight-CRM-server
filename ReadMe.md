@@ -3,6 +3,7 @@
 
 - Eli Pentser [part I: server side]
   - Using Express.js server on node to create web server with secure http protocol.
+    - (https://nodejs.org/en/knowledge/HTTP/servers/how-to-create-a-HTTPS-server/)
   - Using postgresql db for store data on server side:
     - local db server: include dumpfile (on 'data/test_db.sql')
 

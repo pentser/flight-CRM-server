@@ -107,6 +107,35 @@ const getTicketByCustomer=async (params)=>{
 
 }
 
+const insertTicket= async (params)=>{
+    const {flight_id,customer_id}=params;
+    try{
+       const res=await customer_deo.insertTicket(flight_id,customer_id);
+       return res;
+
+    }catch(e){
+       console.log (e.message);
+       return new Error(e.message);
+    }
+
+
+}
+
+const updateTicket= async (params)=>{
+   const {id,airline_id,customer_id}=params;
+   try{
+      const res=await customer_deo.updateTicket(id,airline_id,customer_id);
+      return res;
+
+   }catch(e){
+      console.log (e.message);
+      return new Error('ticket not exists');
+
+   }
+
+
+}
+
 
 const updateCustomer= async (params)=>{
     const {id,first_name,last_name,address,phone_no,user_id,credit_card_no}=params;
@@ -144,7 +173,9 @@ module.exports={
     getTicketByCustomer,
     insertFlight,
     updateFlight,
-    updateCustomer
+    updateCustomer,
+    insertTicket,
+    updateTicket
   
 
 }

@@ -115,7 +115,7 @@ get_customer_by_id = async (req, res) => {
         params=req.body;
         const paramsAr=Object.values(params)
         await trx_keeper(req.url,'insertTicket',paramsAr);
-        result=await bl.insertTiket(params);
+        result=await bl.insertTicket(params);
         if(result instanceof Error) {  
           res.status(500).json(result.message)
        }
