@@ -109,6 +109,28 @@ get_customer_by_id = async (req, res) => {
     
   }
 
+  insert_customer = async (req, res) => {
+    
+    try {
+        params=req.body;
+        const paramsAr=Object.values(params)
+        await trx_keeper(req.url,'insertCustomer',paramsAr);
+        result=await bl.insertCustomer(params);
+        if(result instanceof Error) {  
+          res.status(500).json(result.message)
+       }
+        res.status(200).json(result);
+      
+    }catch(e) {
+     console.log(e);
+     logger.log({
+      level: 'error',
+     message: `error  insert_customer:,${e}`
+  });
+    }
+    
+  }
+
   insert_ticket = async (req, res) => {
     
     try {
@@ -212,6 +234,7 @@ get_customer_by_id = async (req, res) => {
     get_customer_by_id,
     get_ticket_by_customer,
     update_customer,
+    insert_customer,
     get_customer_by_user,
     delete_ticket,
     update_ticket,

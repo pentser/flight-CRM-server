@@ -18,6 +18,20 @@ const updateCustomers=async (_id,_first_name,_last_name,_address,_phone_no,_user
 
 }
 
+const insertCustomers=async (_first_name,_last_name,_address,_phone_no,_user_id,_credit_card_no) => {
+
+    try {
+
+        const result=await rawRepo.getRowResult(`select * from sp_insert_customer(
+        '${_first_name}','${_last_name}','${_address}','${_phone_no}','${_user_id}','${_credit_card_no}')`);
+        return result.rows[0].sp_insert_customer;
+
+    } catch(e) {
+        console.log(e.message);
+    }
+
+}
+
 const getCustomerById=async (_id) => {
 
     try {
@@ -117,6 +131,7 @@ const getCustomerByUser=async (_user) => {
 module.exports={
   
     updateCustomers,
+    insertCustomers,
     getCustomerById,
     getTicketByCustomer,
     deleteTicket,

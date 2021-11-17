@@ -153,6 +153,22 @@ const updateCustomer= async (params)=>{
 }
 
 
+const insertCustomer= async (params)=>{
+   const {first_name,last_name,address,phone_no,user_id,credit_card_no}=params;
+   try{
+      const res=await customer_deo.insertCustomers(first_name,last_name,address,phone_no,user_id,credit_card_no);
+     
+      return res;
+
+   }catch(e){
+      console.log (e.message);
+      return new Error('the customer not added to the table');
+   }
+
+
+}
+
+
 
 
 
@@ -174,6 +190,7 @@ module.exports={
     insertFlight,
     updateFlight,
     updateCustomer,
+    insertCustomer,
     insertTicket,
     updateTicket
   

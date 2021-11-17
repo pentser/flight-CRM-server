@@ -15,6 +15,8 @@ router.get('/get_ticket_by_customer', customerController.get_ticket_by_customer)
 
 router.put('/update_customer',customerController.update_customer);
 
+router.post('/insert_customer',customerController.insert_customer);
+
 router.post('/insert_ticket',customerController.insert_ticket);
 
 router.put('/update_ticket',customerController.update_ticket);
