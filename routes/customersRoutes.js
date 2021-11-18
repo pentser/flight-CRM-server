@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
 router.get('/get_customer_by_id', customerController.get_customer_by_id);
 
-router.get('/get_customer_by_user',customerController.get_customer_by_user)
+router.post('/get_customer_by_user',customerController.get_customer_by_user)
 
 router.get('/get_ticket_by_customer', customerController.get_ticket_by_customer);
 

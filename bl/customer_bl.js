@@ -14,9 +14,9 @@ const getCustomerById=async (params)=>{
 }
 
 const getCustomerByUser=async (params)=>{
-    const {user}=params;
+    const {username}=params;
     try {
-     const res=await customer_deo.getCustomerByUser(user);
+     const res=await customer_deo.getCustomerByUser(username);
      return res.rows[0];
     }catch(e){
         console.log (e.message);

@@ -7312,3 +7312,63 @@
   label: 'testing mode',
   timestamp: '2021-11-17T08:49:28.360Z'
 }
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-17T09:40:00.438Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-17T10:18:22.852Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-17T12:11:52.333Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-17T12:18:38.472Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-11-17T12:20:35.964Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-17T18:39:10.423Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-18T06:00:58.932Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-18T09:48:50.416Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-18T09:52:14.821Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-18T09:53:41.416Z'
+}
