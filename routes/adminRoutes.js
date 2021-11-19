@@ -39,8 +39,8 @@ router.delete('/delete_customer',adminController.delete_customer);
 *         "404":
 *           description: user id not found.
 */
-router.get('/get_user_by_id', adminController.get_user_by_id);
-router.get('/get_admin_by_user', adminController.get_admin_by_user);
+router.post('/get_user_by_id', adminController.get_user_by_id);
+router.post('/get_admin_by_user', adminController.get_admin_by_user);
 
 router.get('/get_all_users', adminController.get_all_users);
 router.get('/get_all_customers', adminController.get_all_customers);
@@ -77,7 +77,7 @@ router.get('/get_all_trasactions',clientActionController.get_all_transactions);
 *         "404":
 *           description: user not found.
 */
-router.get('/get_user_by_user', adminController.get_user_by_user);
+router.post('/get_user_by_user', adminController.get_user_by_user);
 
 
 
