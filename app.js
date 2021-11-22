@@ -74,7 +74,7 @@ const dbURI = 'mongodb+srv://eli:Lvvf3gzFdKn8KuC@int2021.xduzl.mongodb.net/node-
 
 
 
-app.get('*',authRoute );
+app.get('*',requireAuth );
   app.use('/',loginRoutes);
   app.use('/',signupRoutes);
    app.use('/anonymous/api',anonymousRoutes);

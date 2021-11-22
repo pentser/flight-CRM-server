@@ -45,6 +45,7 @@ const requireAuth = (req, res, next) => {
     });
   } else {
    // res.redirect('/signout'); // in ajax act differently
+   next();
   }
 };
 
@@ -78,7 +79,7 @@ const isLogin = (req, res, next) => {
         }
       });
     } else {
-      res.status(401)//.redirect("/");
+      // Only anonyamus rule when no token provide.
       next();
     }
   };
