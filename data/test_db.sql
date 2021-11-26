@@ -16,6 +16,24 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
+--
+-- Name: checkusernameavailability(text); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.checkusernameavailability(_user_name text) RETURNS boolean
+    LANGUAGE plpgsql
+    AS $$
+declare
+        isExist boolean:=false;
+    begin
+
+    return isExist;
+    end ;
+$$;
+
+
+ALTER FUNCTION public.checkusernameavailability(_user_name text) OWNER TO postgres;
+
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
@@ -44,15 +62,16 @@ ALTER TABLE public.flights OWNER TO postgres;
 CREATE FUNCTION public.get_arrival_flights(_country_id bigint) RETURNS SETOF public.flights
     LANGUAGE plpgsql
     AS $$
-    begin
+begin
         return query
         select * from flights where flights.destination_country_id=_country_id
-        AND landing_time>now() - interval '12 hours';
+         AND (flights.landing_time between now() AND (now() + interval '12 hours'));
+
 
 
     end;
 
-    $$;
+$$;
 
 
 ALTER FUNCTION public.get_arrival_flights(_country_id bigint) OWNER TO postgres;
@@ -64,14 +83,15 @@ ALTER FUNCTION public.get_arrival_flights(_country_id bigint) OWNER TO postgres;
 CREATE FUNCTION public.get_departure_flights(_country_id bigint) RETURNS SETOF public.flights
     LANGUAGE plpgsql
     AS $$
-    begin
+begin
         return query
         select * from flights where flights.origin_country_id=_country_id
-        AND flights.departure_time>now() + interval '12 hours';
+        AND (flights.departure_time between (now() - interval '12 hours') AND now());
+
 
     end;
 
-    $$;
+$$;
 
 
 ALTER FUNCTION public.get_departure_flights(_country_id bigint) OWNER TO postgres;
@@ -512,6 +532,26 @@ $$;
 ALTER FUNCTION public.sp_get_all_flights() OWNER TO postgres;
 
 --
+-- Name: sp_get_all_flights_join(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.sp_get_all_flights_join() RETURNS TABLE(id bigint, airline_name text, origin_country_name text, destination_country_name text, departure_time timestamp without time zone, landing_time timestamp without time zone, remaining_tickets integer)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+            RETURN QUERY
+            SELECT f.id, a.name, c.name,c1.name,f.departure_time,f.landing_time,f.remaining_tickets
+             from flights f
+            join countries c on f.origin_country_id = c.id
+            join countries c1 on f.destination_country_id = c1.id
+            join airlines a on f.airline_id=a.id;
+        END;
+$$;
+
+
+ALTER FUNCTION public.sp_get_all_flights_join() OWNER TO postgres;
+
+--
 -- Name: sp_get_all_tickets(); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -534,7 +574,7 @@ ALTER FUNCTION public.sp_get_all_tickets() OWNER TO postgres;
 CREATE FUNCTION public.sp_get_all_tickets_join() RETURNS TABLE(id bigint, name text, first_name text, last_name text, departure_time timestamp without time zone, landing_time timestamp without time zone, origin text)
     LANGUAGE plpgsql
     AS $$
-        BEGIN
+BEGIN
             RETURN QUERY
             SELECT t.id, a.name , c.first_name, c.last_name,f.departure_time,f.landing_time,cu.name
              from tickets t
@@ -543,10 +583,26 @@ CREATE FUNCTION public.sp_get_all_tickets_join() RETURNS TABLE(id bigint, name t
             join airlines a on f.airline_id=a.id
             join countries cu on f.origin_country_id=cu.id;
         END;
-    $$;
+$$;
 
 
 ALTER FUNCTION public.sp_get_all_tickets_join() OWNER TO postgres;
+
+--
+-- Name: sp_get_all_users(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.sp_get_all_users() RETURNS TABLE(id bigint, username text, password text, email text, rule text)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+        RETURN QUERY
+        SELECT * from users;
+    END;
+$$;
+
+
+ALTER FUNCTION public.sp_get_all_users() OWNER TO postgres;
 
 --
 -- Name: countries; Type: TABLE; Schema: public; Owner: postgres
@@ -680,7 +736,8 @@ CREATE TABLE public.users (
     id bigint NOT NULL,
     username text NOT NULL,
     password text NOT NULL,
-    email text NOT NULL
+    email text NOT NULL,
+    rule text NOT NULL
 );
 
 
@@ -830,17 +887,17 @@ CREATE FUNCTION public.sp_insert_ticket(_flight_id bigint, _customer_id bigint) 
 ALTER FUNCTION public.sp_insert_ticket(_flight_id bigint, _customer_id bigint) OWNER TO postgres;
 
 --
--- Name: sp_insert_users(text, text, text); Type: FUNCTION; Schema: public; Owner: postgres
+-- Name: sp_insert_users(text, text, text, text); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
-CREATE FUNCTION public.sp_insert_users(_username text, _password text, _email text) RETURNS bigint
+CREATE FUNCTION public.sp_insert_users(_username text, _password text, _email text, _rule text) RETURNS bigint
     LANGUAGE plpgsql
     AS $$
 DECLARE
             new_id bigint;
         BEGIN
-            INSERT INTO users (username,password,email)
-            VALUES (_username,_password,_email)
+            INSERT INTO users (username,password,email,rule)
+            VALUES (_username,_password,_email,_rule)
             RETURNING id into new_id;
 
             return new_id;
@@ -848,7 +905,7 @@ DECLARE
 $$;
 
 
-ALTER FUNCTION public.sp_insert_users(_username text, _password text, _email text) OWNER TO postgres;
+ALTER FUNCTION public.sp_insert_users(_username text, _password text, _email text, _rule text) OWNER TO postgres;
 
 --
 -- Name: sp_update_airlines(bigint, text, integer, bigint); Type: FUNCTION; Schema: public; Owner: postgres
@@ -997,28 +1054,28 @@ CREATE FUNCTION public.sp_update_tickets(_id bigint, _flight_id bigint, _custome
 ALTER FUNCTION public.sp_update_tickets(_id bigint, _flight_id bigint, _customer_id bigint) OWNER TO postgres;
 
 --
--- Name: sp_update_user(bigint, text, text, text); Type: FUNCTION; Schema: public; Owner: postgres
+-- Name: sp_update_user(bigint, text, text, text, text); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
-CREATE FUNCTION public.sp_update_user(_id bigint, _username text, _password text, _email text) RETURNS bigint
+CREATE FUNCTION public.sp_update_user(_id bigint, _username text, _password text, _email text, _rule text) RETURNS bigint
     LANGUAGE plpgsql
     AS $$
-        DECLARE
+DECLARE
             rows_count int := 0;
         BEGIN
             WITH rows AS (
             UPDATE users
             SET username = _username, password = _password,
-                email=_email
+                email=_email,rule=_rule
             WHERE id = _id
             RETURNING 1)
             select count(*) into rows_count from rows;
             return rows_count;
         END;
-    $$;
+$$;
 
 
-ALTER FUNCTION public.sp_update_user(_id bigint, _username text, _password text, _email text) OWNER TO postgres;
+ALTER FUNCTION public.sp_update_user(_id bigint, _username text, _password text, _email text, _rule text) OWNER TO postgres;
 
 --
 -- Name: sp_upsert_airlines(text, integer, bigint); Type: FUNCTION; Schema: public; Owner: postgres
@@ -1047,17 +1104,17 @@ CREATE FUNCTION public.sp_upsert_airlines(_name text, _country_id integer, _user
 ALTER FUNCTION public.sp_upsert_airlines(_name text, _country_id integer, _user_id bigint) OWNER TO postgres;
 
 --
--- Name: sp_upsert_users(text, text, text); Type: FUNCTION; Schema: public; Owner: postgres
+-- Name: sp_upsert_users(text, text, text, text); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
-CREATE FUNCTION public.sp_upsert_users(_username text, _password text, _email text) RETURNS integer
+CREATE FUNCTION public.sp_upsert_users(_username text, _password text, _email text, _rule text) RETURNS integer
     LANGUAGE plpgsql
     AS $$
-    declare
+declare
         new_id bigint := 0;
     begin
         if not exists(select 1 from users where username = _username) then
-            insert into users (username, password,email) values (_username,_password,_email)
+            insert into users (username, password,email,rule) values (_username,_password,_email,_rule)
             returning id into new_id;
             return new_id;
         else
@@ -1067,10 +1124,10 @@ CREATE FUNCTION public.sp_upsert_users(_username text, _password text, _email te
             return 0;
         end if;
     end;
-    $$;
+$$;
 
 
-ALTER FUNCTION public.sp_upsert_users(_username text, _password text, _email text) OWNER TO postgres;
+ALTER FUNCTION public.sp_upsert_users(_username text, _password text, _email text, _rule text) OWNER TO postgres;
 
 --
 -- Name: airlines_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1290,22 +1347,6 @@ ALTER TABLE ONLY public.tickets
 
 
 --
--- Name: tickets tickets_flight_id_customer_id_key1; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.tickets
-    ADD CONSTRAINT tickets_flight_id_customer_id_key1 UNIQUE (flight_id, customer_id);
-
-
---
--- Name: tickets tickets_flight_id_customer_id_key2; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.tickets
-    ADD CONSTRAINT tickets_flight_id_customer_id_key2 UNIQUE (flight_id, customer_id);
-
-
---
 -- Name: tickets tickets_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1361,13 +1402,6 @@ CREATE UNIQUE INDEX customers_phone_no_uindex ON public.customers USING btree (p
 --
 
 CREATE UNIQUE INDEX customers_user_id_uindex ON public.customers USING btree (user_id);
-
-
---
--- Name: tickets_customer_id_uindex; Type: INDEX; Schema: public; Owner: postgres
---
-
-CREATE UNIQUE INDEX tickets_customer_id_uindex ON public.tickets USING btree (customer_id);
 
 
 --
