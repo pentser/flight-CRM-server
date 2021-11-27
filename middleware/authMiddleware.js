@@ -14,21 +14,20 @@ const requireAuth = (req, res, next) => {
         //res.redirect('/login'); // in ajax act differently
       } else {
           // we may here- check the user role ...
-          const url=req.url;
+          const url=req.baseUrl;
           const user= req.cookies.user;
           let flag=false;
-          console.log(decodedToken);
           switch (user.rule) {
-            case "Customers":
-              if(url.indexOf('customers'))
+            case "Customer":
+              if(url.indexOf('customers')|| url.indexOf('anonymous'))
                  flag= true;
               break;
-            case "Airlines":
-              if(url.indexOf('airlines'))
+            case "Airline":
+              if(url.indexOf('airlines')|| url.indexOf('anonymous'))
                  flag= true;
               break;
             case "Admin":
-              if(url.indexOf('admin'))
+              if(url.indexOf('admin')|| url.indexOf('anonymous'))
                 flag= true;
               break;
             case "Anonymous":
@@ -79,7 +78,7 @@ const isLogin = (req, res, next) => {
         }
       });
     } else {
-      // Only anonyamus rule when no token provide.
+      // Only anonymous rule when no token provide.
       next();
     }
   };

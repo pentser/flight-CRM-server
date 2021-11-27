@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const airlineController = require('../controllers/airlineController');
 const clientActionController=require('../controllers/clientActionController')
+const {requireAuth} =require('../middleware/authMiddleware');
 
 const router = Router();
 
@@ -61,14 +62,14 @@ const router = Router();
 *           description: country id not found.
 */
 
-router.put('/update_airline',airlineController.update_airline);
+router.put('/update_airline',requireAuth,airlineController.update_airline);
 
 
-router.post('/insert_flight',airlineController.insert_flight);
+router.post('/insert_flight',requireAuth,airlineController.insert_flight);
 
-router.put('/update_flight',airlineController.update_flight);
+router.put('/update_flight',requireAuth,airlineController.update_flight);
 
-router.delete('/delete_flight',airlineController.delete_flight);
+router.delete('/delete_flight',requireAuth,airlineController.delete_flight);
 
 
 /**
@@ -92,7 +93,7 @@ router.delete('/delete_flight',airlineController.delete_flight);
 *         "404":
 *           description: user not found.
 */
-router.get('/get_airline_by_user', airlineController.get_airline_by_user);
+router.get('/get_airline_by_user', requireAuth,airlineController.get_airline_by_user);
 
 
 

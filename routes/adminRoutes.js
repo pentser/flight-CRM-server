@@ -1,21 +1,22 @@
 const { Router } = require('express');
 const adminController = require('../controllers/adminController');
-const clientActionController=require('../controllers/clientActionController')
+const clientActionController=require('../controllers/clientActionController');
+const {requireAuth} =require('../middleware/authMiddleware');
 
 const router = Router();
 
 
-router.post('/insert_country',adminController.insert_country);
-router.put('/update_country',adminController.update_country);
-router.delete('/delete_country',adminController.delete_country);
+router.post('/insert_country',requireAuth,adminController.insert_country);
+router.put('/update_country',requireAuth,adminController.update_country);
+router.delete('/delete_country',requireAuth,adminController.delete_country);
 
-router.post('/insert_airline',adminController.insert_airline);
-router.put('/update_airline',adminController.update_airline);
-router.delete('/delete_airline',adminController.delete_airline);
+router.post('/insert_airline',requireAuth,adminController.insert_airline);
+router.put('/update_airline',requireAuth,adminController.update_airline);
+router.delete('/delete_airline',requireAuth,adminController.delete_airline);
 
 
-router.put('/update_customer',adminController.update_customer);
-router.delete('/delete_customer',adminController.delete_customer);
+router.put('/update_customer',requireAuth,adminController.update_customer);
+router.delete('/delete_customer',requireAuth,adminController.delete_customer);
 
 
 /**
@@ -39,16 +40,16 @@ router.delete('/delete_customer',adminController.delete_customer);
 *         "404":
 *           description: user id not found.
 */
-router.post('/get_user_by_id', adminController.get_user_by_id);
+router.post('/get_user_by_id',requireAuth, adminController.get_user_by_id);
 router.post('/get_admin_by_user', adminController.get_admin_by_user);
 
-router.get('/get_all_users', adminController.get_all_users);
-router.get('/get_all_customers', adminController.get_all_customers);
-router.get('/get_all_tickets', adminController.get_all_tickets);
-router.get('/get_all_tickets_join', adminController.get_all_tickets_join);
+router.get('/get_all_users',requireAuth, adminController.get_all_users);
+router.get('/get_all_customers', requireAuth,adminController.get_all_customers);
+router.get('/get_all_tickets', requireAuth,adminController.get_all_tickets);
+router.get('/get_all_tickets_join',requireAuth, adminController.get_all_tickets_join);
 
 
-router.get('/get_all_trasactions',clientActionController.get_all_transactions);
+router.get('/get_all_trasactions',requireAuth,clientActionController.get_all_transactions);
 
 
 
@@ -77,7 +78,7 @@ router.get('/get_all_trasactions',clientActionController.get_all_transactions);
 *         "404":
 *           description: user not found.
 */
-router.post('/get_user_by_user', adminController.get_user_by_user);
+router.post('/get_user_by_user',requireAuth, adminController.get_user_by_user);
 
 
 

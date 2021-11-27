@@ -1,5 +1,7 @@
 const { Router } = require('express');
 const customerController = require('../controllers/customerController');
+const {requireAuth} =require('../middleware/authMiddleware')
+
 
 const router = Router();
 
@@ -7,21 +9,21 @@ router.get('/',(req,res)=>{
     res.send('customer api page')
 })
 
-router.get('/get_customer_by_id', customerController.get_customer_by_id);
+router.get('/get_customer_by_id', requireAuth,customerController.get_customer_by_id);
 
-router.post('/get_customer_by_user',customerController.get_customer_by_user)
+router.post('/get_customer_by_user',requireAuth,customerController.get_customer_by_user)
 
-router.get('/get_ticket_by_customer', customerController.get_ticket_by_customer);
+router.get('/get_ticket_by_customer', requireAuth,customerController.get_ticket_by_customer);
 
-router.put('/update_customer',customerController.update_customer);
+router.put('/update_customer',requireAuth,customerController.update_customer);
 
 router.post('/insert_customer',customerController.insert_customer);
 
-router.post('/insert_ticket',customerController.insert_ticket);
+router.post('/insert_ticket',requireAuth,customerController.insert_ticket);
 
-router.put('/update_ticket',customerController.update_ticket);
+router.put('/update_ticket',requireAuth,customerController.update_ticket);
 
-router.delete('/delete_ticket',customerController.delete_ticket);
+router.delete('/delete_ticket',requireAuth,customerController.delete_ticket);
 
 
 /**
@@ -45,7 +47,7 @@ router.delete('/delete_ticket',customerController.delete_ticket);
 *         "404":
 *           description: country id not found.
 */
-router.get('/get_country_by_id',customerController.get_country_by_id);
+router.get('/get_country_by_id',requireAuth,customerController.get_country_by_id);
 
 
 
