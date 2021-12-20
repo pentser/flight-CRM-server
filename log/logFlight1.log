@@ -7648,3 +7648,243 @@
   label: 'testing mode',
   timestamp: '2021-11-27T04:39:51.355Z'
 }
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-27T05:25:50.099Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-27T14:43:40.888Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-28T17:37:22.701Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-30T05:32:25.450Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-11-30T10:21:30.051Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-01T06:58:03.781Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-12-01T07:25:54.916Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-01T07:25:55.254Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-01T07:26:17.925Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-12-01T07:26:24.941Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-01T07:26:24.959Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-01T07:26:46.337Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-03T06:58:34.358Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-06T13:25:48.263Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-07T12:14:41.830Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-12-07T12:38:48.760Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-07T12:38:49.338Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-07T12:39:10.012Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-08T05:43:38.307Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-12-08T06:10:25.292Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-08T06:10:25.783Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-12-08T06:10:45.158Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-08T06:10:45.167Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-08T06:10:47.449Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-08T06:11:06.621Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-08T06:11:49.716Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-08T06:12:47.465Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-13T07:24:50.349Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-13T07:35:59.628Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-16T05:25:59.810Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-17T06:50:51.552Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-17T07:00:52.991Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-19T09:05:31.884Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-12-19T09:09:18.792Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-19T09:09:19.256Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-19T09:09:40.470Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-19T21:45:33.373Z'
+}
+{
+  level: 'info',
+  message: 'connected to host on port: 3000',
+  label: 'testing mode',
+  timestamp: '2021-12-20T13:45:03.606Z'
+}
+{
+  level: 'error',
+  message: 'error  get_departure_flights:,Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  label: 'testing mode',
+  timestamp: '2021-12-20T13:50:05.746Z'
+}
+{
+  level: 'error',
+  message: 'error  get_flights_by_parameters:,ReferenceError: message is not defined',
+  label: 'testing mode',
+  timestamp: '2021-12-20T13:50:06.265Z'
+}

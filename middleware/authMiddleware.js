@@ -19,15 +19,15 @@ const requireAuth = (req, res, next) => {
           let flag=false;
           switch (user.rule) {
             case "Customer":
-              if(url.indexOf('customers')|| url.indexOf('anonymous'))
+              if(url.indexOf('customers'))
                  flag= true;
               break;
             case "Airline":
-              if(url.indexOf('airlines')|| url.indexOf('anonymous'))
+              if(url.indexOf('airlines'))
                  flag= true;
               break;
             case "Admin":
-              if(url.indexOf('admin')|| url.indexOf('anonymous'))
+              if(url.indexOf('admin'))
                 flag= true;
               break;
             case "Anonymous":
